@@ -10,11 +10,14 @@
 		EB1193B71941AD0400A85A3F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B61941AD0400A85A3F /* main.swift */; };
 		EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B81941AD0400A85A3F /* AppDelegate.swift */; };
 		EB1193BB1941AD0400A85A3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193BA1941AD0400A85A3F /* GameScene.swift */; };
-		EB1193BD1941AD0400A85A3F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BC1941AD0400A85A3F /* GameScene.sks */; };
+		EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BC1941AD0400A85A3F /* SpaceScene.sks */; };
 		EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BE1941AD0400A85A3F /* Images.xcassets */; };
 		EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1193C01941AD0400A85A3F /* MainMenu.xib */; };
 		EB1193CE1941AD0400A85A3F /* TypoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193CD1941AD0400A85A3F /* TypoTests.swift */; };
 		EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */; };
+		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
+		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
+		EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13F1944B77900A50FFC /* SpaceScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,7 @@
 		EB1193B61941AD0400A85A3F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EB1193B81941AD0400A85A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB1193BA1941AD0400A85A3F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		EB1193BC1941AD0400A85A3F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EB1193BC1941AD0400A85A3F /* SpaceScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpaceScene.sks; sourceTree = "<group>"; };
 		EB1193BE1941AD0400A85A3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB1193C11941AD0400A85A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EB1193C71941AD0400A85A3F /* TypoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +44,9 @@
 		EB1193CD1941AD0400A85A3F /* TypoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoTests.swift; sourceTree = "<group>"; };
 		EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SKPlaygroundTest.playground; sourceTree = "<group>"; };
 		EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
+		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
+		EBEFF13F1944B77900A50FFC /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +90,11 @@
 			children = (
 				EB1193B81941AD0400A85A3F /* AppDelegate.swift */,
 				EB1193BA1941AD0400A85A3F /* GameScene.swift */,
-				EB1193BC1941AD0400A85A3F /* GameScene.sks */,
+				EBEFF13F1944B77900A50FFC /* SpaceScene.swift */,
+				EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */,
 				EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */,
+				EB1193BC1941AD0400A85A3F /* SpaceScene.sks */,
+				EB60C8091944BC130071C5C1 /* MonsterScene.sks */,
 				EB1193BE1941AD0400A85A3F /* Images.xcassets */,
 				EB1193C01941AD0400A85A3F /* MainMenu.xib */,
 				EB1193B41941AD0400A85A3F /* Supporting Files */,
@@ -200,7 +209,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1193BD1941AD0400A85A3F /* GameScene.sks in Resources */,
+				EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */,
+				EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */,
 				EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */,
 				EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */,
 			);
@@ -221,9 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1193BB1941AD0400A85A3F /* GameScene.swift in Sources */,
+				EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */,
 				EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */,
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
+				EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				EB1193D31941AD0400A85A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB1193D41941AD0400A85A3F /* Build configuration list for PBXNativeTarget "TypoTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				EB1193D61941AD0400A85A3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         /* Pick a size for the scene */
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+        if let scene = MonsterScene.unarchiveFromFile("MonsterScene") as? MonsterScene {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
 
