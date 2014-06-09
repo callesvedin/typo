@@ -16,6 +16,7 @@
 		EB1193CE1941AD0400A85A3F /* TypoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193CD1941AD0400A85A3F /* TypoTests.swift */; };
 		EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */; };
 		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
+		EBE1845A19465B6B008BF16D /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBE1845919465B6B008BF16D /* asteroid.atlas */; };
 		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
 		EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13F1944B77900A50FFC /* SpaceScene.swift */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SKPlaygroundTest.playground; sourceTree = "<group>"; };
 		EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
+		EBE1845919465B6B008BF16D /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
 		EBEFF13F1944B77900A50FFC /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 		EB1193A81941AD0400A85A3F = {
 			isa = PBXGroup;
 			children = (
+				EBE1845919465B6B008BF16D /* asteroid.atlas */,
 				EB1193B31941AD0400A85A3F /* Typo */,
 				EB1193CA1941AD0400A85A3F /* TypoTests */,
 				EB1193B21941AD0400A85A3F /* Products */,
@@ -213,6 +216,7 @@
 				EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */,
 				EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */,
 				EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */,
+				EBE1845A19465B6B008BF16D /* asteroid.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

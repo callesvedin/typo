@@ -15,9 +15,17 @@ class SpaceScene:GameScene
     var _letters: Character[] = ["a","s","d","f","j","k","l","ö"]
     let randomGenerator = RandomNumberGenerator()
 
+    let asteroidAtlas = SKTextureAtlas(named: "asteroid")
+    var frames = SKTexture[]()
+    
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view);
         backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1)
+        frames.append(asteroidAtlas.textureNamed("asteroid_1"))
+        frames.append(asteroidAtlas.textureNamed("asteroid_2"))
+        frames.append(asteroidAtlas.textureNamed("asteroid_3"))
+        frames.append(asteroidAtlas.textureNamed("asteroid_4"))
+
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -37,16 +45,35 @@ class SpaceScene:GameScene
     }
     
     func createCharacterNode(letter: Character) ->SKNode {
-        let node = SKLabelNode(text: String(letter))
-        node.position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height-40))
-        node.fontSize = 30;
-        node.physicsBody = SKPhysicsBody(circleOfRadius: node.fontSize/2)
-        node.physicsBody.dynamic = true
-        node.physicsBody.allowsRotation = false
-        node.physicsBody.restitution = 1.0
-        node.physicsBody.friction = 0.0
-        node.physicsBody.angularDamping = 0.0
-        node.physicsBody.linearDamping = 0.0
-        return node
+        let imageNode = SKSpriteNode(texture: frames[randomGenerator.randomInt(0, to: 3)])
+        imageNode.setScale(0.3)
+
+        let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
+        let action = SKAction.repeatActionForever(SKAction.rotateByAngle(rotation, duration: NSTimeInterval(1)))
+        imageNode.runAction(action)
+        
+        println("imageNode size:\(imageNode.frame.width)")
+        imageNode.anchorPoint = CGPoint(x:0.5,y:0.5)
+
+        let parentNode = SKNode()
+        parentNode.addChild(imageNode)
+        parentNode.position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
+        parentNode.physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
+
+        parentNode.physicsBody.dynamic = true
+        parentNode.physicsBody.allowsRotation = false
+        parentNode.physicsBody.restitution = 1.0
+        parentNode.physicsBody.friction = 0.0
+        parentNode.physicsBody.angularDamping = 0.0
+        parentNode.physicsBody.linearDamping = 0.0
+        let letterNode = SKLabelNode(text: String(letter))
+        letterNode.fontName="Helvetica"
+        letterNode.fontSize = 25;
+        letterNode.color = SKColor.whiteColor()
+//        letterNode.colorBlendFactor = 0.5
+        parentNode.addChild(letterNode)
+        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
+
+        return parentNode
     }
 }
