@@ -15,6 +15,8 @@
 		EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1193C01941AD0400A85A3F /* MainMenu.xib */; };
 		EB1193CE1941AD0400A85A3F /* TypoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193CD1941AD0400A85A3F /* TypoTests.swift */; };
 		EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */; };
+		EB5B9CAD1959F3A900FFCB63 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */; };
+		EB5B9CAE1959F3A900FFCB63 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EB5B9CAC1959F3A900FFCB63 /* spark.png */; };
 		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
 		EBE1845A19465B6B008BF16D /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBE1845919465B6B008BF16D /* asteroid.atlas */; };
 		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
@@ -45,6 +47,8 @@
 		EB1193CD1941AD0400A85A3F /* TypoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoTests.swift; sourceTree = "<group>"; };
 		EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SKPlaygroundTest.playground; sourceTree = "<group>"; };
 		EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
+		EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
+		EB5B9CAC1959F3A900FFCB63 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
 		EBE1845919465B6B008BF16D /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 		EB1193A81941AD0400A85A3F = {
 			isa = PBXGroup;
 			children = (
+				EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */,
+				EB5B9CAC1959F3A900FFCB63 /* spark.png */,
 				EBE1845919465B6B008BF16D /* asteroid.atlas */,
 				EB1193B31941AD0400A85A3F /* Typo */,
 				EB1193CA1941AD0400A85A3F /* TypoTests */,
@@ -212,6 +218,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5B9CAD1959F3A900FFCB63 /* asteroid_fire.sks in Resources */,
+				EB5B9CAE1959F3A900FFCB63 /* spark.png in Resources */,
 				EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */,
 				EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */,
 				EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */,
