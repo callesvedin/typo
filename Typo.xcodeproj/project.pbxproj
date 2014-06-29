@@ -15,10 +15,20 @@
 		EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1193C01941AD0400A85A3F /* MainMenu.xib */; };
 		EB1193CE1941AD0400A85A3F /* TypoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193CD1941AD0400A85A3F /* TypoTests.swift */; };
 		EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */; };
-		EB5B9CAD1959F3A900FFCB63 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */; };
-		EB5B9CAE1959F3A900FFCB63 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EB5B9CAC1959F3A900FFCB63 /* spark.png */; };
 		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
-		EBE1845A19465B6B008BF16D /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBE1845919465B6B008BF16D /* asteroid.atlas */; };
+		EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384519605CBA00641CD1 /* asteroid.atlas */; };
+		EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384619605CBA00641CD1 /* asteroid_fire.sks */; };
+		EBB6386019605CBA00641CD1 /* SA-GroundG01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */; };
+		EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */; };
+		EBB6386219605CBA00641CD1 /* cecilharvey.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385019605CBA00641CD1 /* cecilharvey.png */; };
+		EBB6386319605CBA00641CD1 /* kainhighwind.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385119605CBA00641CD1 /* kainhighwind.atlas */; };
+		EBB6386419605CBA00641CD1 /* kainhighwind.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385219605CBA00641CD1 /* kainhighwind.png */; };
+		EBB6386519605CBA00641CD1 /* bahamut.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385419605CBA00641CD1 /* bahamut.atlas */; };
+		EBB6386619605CBA00641CD1 /* bahamut.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385519605CBA00641CD1 /* bahamut.png */; };
+		EBB6386719605CBA00641CD1 /* ifrit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385619605CBA00641CD1 /* ifrit.atlas */; };
+		EBB6386819605CBA00641CD1 /* ifrit.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385719605CBA00641CD1 /* ifrit.png */; };
+		EBB6386919605CBA00641CD1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385819605CBA00641CD1 /* spark.png */; };
+		EBB6386B19605E9B00641CD1 /* grass.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6386A19605E9B00641CD1 /* grass.atlas */; };
 		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
 		EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13F1944B77900A50FFC /* SpaceScene.swift */; };
 /* End PBXBuildFile section */
@@ -47,10 +57,20 @@
 		EB1193CD1941AD0400A85A3F /* TypoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoTests.swift; sourceTree = "<group>"; };
 		EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SKPlaygroundTest.playground; sourceTree = "<group>"; };
 		EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
-		EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
-		EB5B9CAC1959F3A900FFCB63 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
-		EBE1845919465B6B008BF16D /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
+		EBB6384519605CBA00641CD1 /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
+		EBB6384619605CBA00641CD1 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
+		EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SA-GroundG01.png"; sourceTree = "<group>"; };
+		EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cecilharvey.atlas; sourceTree = "<group>"; };
+		EBB6385019605CBA00641CD1 /* cecilharvey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cecilharvey.png; sourceTree = "<group>"; };
+		EBB6385119605CBA00641CD1 /* kainhighwind.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = kainhighwind.atlas; sourceTree = "<group>"; };
+		EBB6385219605CBA00641CD1 /* kainhighwind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kainhighwind.png; sourceTree = "<group>"; };
+		EBB6385419605CBA00641CD1 /* bahamut.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bahamut.atlas; sourceTree = "<group>"; };
+		EBB6385519605CBA00641CD1 /* bahamut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bahamut.png; sourceTree = "<group>"; };
+		EBB6385619605CBA00641CD1 /* ifrit.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ifrit.atlas; sourceTree = "<group>"; };
+		EBB6385719605CBA00641CD1 /* ifrit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ifrit.png; sourceTree = "<group>"; };
+		EBB6385819605CBA00641CD1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		EBB6386A19605E9B00641CD1 /* grass.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grass.atlas; sourceTree = "<group>"; };
 		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
 		EBEFF13F1944B77900A50FFC /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,9 +96,6 @@
 		EB1193A81941AD0400A85A3F = {
 			isa = PBXGroup;
 			children = (
-				EB5B9CAB1959F3A900FFCB63 /* asteroid_fire.sks */,
-				EB5B9CAC1959F3A900FFCB63 /* spark.png */,
-				EBE1845919465B6B008BF16D /* asteroid.atlas */,
 				EB1193B31941AD0400A85A3F /* Typo */,
 				EB1193CA1941AD0400A85A3F /* TypoTests */,
 				EB1193B21941AD0400A85A3F /* Products */,
@@ -97,6 +114,7 @@
 		EB1193B31941AD0400A85A3F /* Typo */ = {
 			isa = PBXGroup;
 			children = (
+				EBB6384419605CBA00641CD1 /* resources */,
 				EB1193B81941AD0400A85A3F /* AppDelegate.swift */,
 				EB1193BA1941AD0400A85A3F /* GameScene.swift */,
 				EBEFF13F1944B77900A50FFC /* SpaceScene.swift */,
@@ -136,6 +154,50 @@
 				EB1193CC1941AD0400A85A3F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBB6384419605CBA00641CD1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6384519605CBA00641CD1 /* asteroid.atlas */,
+				EBB6384619605CBA00641CD1 /* asteroid_fire.sks */,
+				EBB6384719605CBA00641CD1 /* grass */,
+				EBB6384E19605CBA00641CD1 /* hero */,
+				EBB6385319605CBA00641CD1 /* monster */,
+				EBB6385819605CBA00641CD1 /* spark.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		EBB6384719605CBA00641CD1 /* grass */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6386A19605E9B00641CD1 /* grass.atlas */,
+				EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */,
+			);
+			path = grass;
+			sourceTree = "<group>";
+		};
+		EBB6384E19605CBA00641CD1 /* hero */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */,
+				EBB6385019605CBA00641CD1 /* cecilharvey.png */,
+				EBB6385119605CBA00641CD1 /* kainhighwind.atlas */,
+				EBB6385219605CBA00641CD1 /* kainhighwind.png */,
+			);
+			path = hero;
+			sourceTree = "<group>";
+		};
+		EBB6385319605CBA00641CD1 /* monster */ = {
+			isa = PBXGroup;
+			children = (
+				EBB6385419605CBA00641CD1 /* bahamut.atlas */,
+				EBB6385519605CBA00641CD1 /* bahamut.png */,
+				EBB6385619605CBA00641CD1 /* ifrit.atlas */,
+				EBB6385719605CBA00641CD1 /* ifrit.png */,
+			);
+			path = monster;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,13 +280,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB5B9CAD1959F3A900FFCB63 /* asteroid_fire.sks in Resources */,
-				EB5B9CAE1959F3A900FFCB63 /* spark.png in Resources */,
 				EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */,
+				EBB6386219605CBA00641CD1 /* cecilharvey.png in Resources */,
 				EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */,
+				EBB6386719605CBA00641CD1 /* ifrit.atlas in Resources */,
+				EBB6386319605CBA00641CD1 /* kainhighwind.atlas in Resources */,
+				EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */,
+				EBB6386B19605E9B00641CD1 /* grass.atlas in Resources */,
+				EBB6386619605CBA00641CD1 /* bahamut.png in Resources */,
 				EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */,
+				EBB6386919605CBA00641CD1 /* spark.png in Resources */,
+				EBB6386419605CBA00641CD1 /* kainhighwind.png in Resources */,
+				EBB6386519605CBA00641CD1 /* bahamut.atlas in Resources */,
+				EBB6386019605CBA00641CD1 /* SA-GroundG01.png in Resources */,
+				EBB6386819605CBA00641CD1 /* ifrit.png in Resources */,
 				EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */,
-				EBE1845A19465B6B008BF16D /* asteroid.atlas in Resources */,
+				EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */,
+				EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

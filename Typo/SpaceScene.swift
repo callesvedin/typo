@@ -17,20 +17,13 @@ class SpaceScene:GameScene
 
     let asteroidAtlas = SKTextureAtlas(named: "asteroid")
     var frames = SKTexture[]()
-//    let burstData:NSData
-//    let path:String
+
     var burstPath:String = ""
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view);
         
-//        let burstPath = NSBundle(identifier: "asteroid_smoke");
         burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-        
-        //        burstData = NSData.dataWithContentsOfFile(path, options: .DataReadingUncached, error: nil)
-        
-        //            [[NSBundle mainBundle]
-        //                pathForResource:@"asteroid_smoke" ofType:@"sks"];
         
         backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1)
         frames.append(asteroidAtlas.textureNamed("asteroid_1"))
@@ -60,12 +53,6 @@ class SpaceScene:GameScene
 
         var burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
         burstNode.zPosition = -1
-        //var burstNode:SKEmitterNode = archiver.decodeObject() as SKEmitterNode;
-        
-//        var burstNode:SKEmitterNode = NSKeyedUnarchiver()
-        
-//            [NSKeyedUnarchiver unarchiveObjectWithFile:burstPath];       let archiver = NSKeyedUnarchiver(forReadingWithData: burstData)
-        
         
         let imageNode = SKSpriteNode(texture: frames[randomGenerator.randomInt(0, to: 3)])
         imageNode.setScale(0.3)
