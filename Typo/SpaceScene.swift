@@ -8,33 +8,25 @@
 
 import SpriteKit
 
-class SpaceScene:GameScene
-{
+class SpaceScene:GameScene, SKPhysicsContactDelegate
+{    
     let _dropRate = 1
     var _lastDrop = 0.0
     var _letters: Character[] = ["a","s","d","f","j","k","l","ö"]
     let randomGenerator = RandomNumberGenerator()
-
-    let asteroidAtlas = SKTextureAtlas(named: "asteroid")
-    var frames = SKTexture[]()
-
-    var burstPath:String = ""
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view);
-        
-        burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-        
         backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1)
-        frames.append(asteroidAtlas.textureNamed("asteroid_1"))
-        frames.append(asteroidAtlas.textureNamed("asteroid_2"))
-        frames.append(asteroidAtlas.textureNamed("asteroid_3"))
-        frames.append(asteroidAtlas.textureNamed("asteroid_4"))
-
+        self.physicsWorld.contactDelegate = self;
     }
     
     override func update(currentTime: CFTimeInterval) {
-        if !_gamePaused {            
+        if !_gamePaused {
+            if !_initialized {
+                createBackground()
+                _initialized = true
+            }
             if _previousTime == 0.0 {
                 _previousTime = currentTime
             }
@@ -50,41 +42,24 @@ class SpaceScene:GameScene
     }
     
     func createCharacterNode(letter: Character) ->SKNode {
-
-        var burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
-        burstNode.zPosition = -1
-        
-        let imageNode = SKSpriteNode(texture: frames[randomGenerator.randomInt(0, to: 3)])
-        imageNode.setScale(0.3)
-
-        let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
-        let action = SKAction.repeatActionForever(SKAction.rotateByAngle(rotation, duration: NSTimeInterval(1)))
-//        imageNode.runAction(action)
-        
-        println("imageNode size:\(imageNode.frame.width)")
-        imageNode.anchorPoint = CGPoint(x:0.5,y:0.5)
-
-        let parentNode = SKNode()
-        parentNode.addChild(burstNode)
-        parentNode.addChild(imageNode)
-        parentNode.position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
-        parentNode.physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
-
-        parentNode.physicsBody.dynamic = true
-        parentNode.physicsBody.allowsRotation = false
-        parentNode.physicsBody.restitution = 1.0
-        parentNode.physicsBody.friction = 0.0
-        parentNode.physicsBody.angularDamping = 0.0
-        parentNode.physicsBody.linearDamping = 0.0
-        let letterNode = SKLabelNode(text: String(letter))
-        letterNode.fontName="Helvetica"
-        letterNode.fontSize = 25;
-        letterNode.color = SKColor.whiteColor()
-//        letterNode.colorBlendFactor = 0.5
-        letterNode.zPosition = 2
-        parentNode.addChild(letterNode)
-        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
-
-        return parentNode
+        var position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
+        return Asteroid(letter: letter,position:position)
     }
+    
+    func createBackground()
+    {
+        addChild(GroundNode(frameSize:frame.size))
+    }
+    
+    func didBeginContact(contact: SKPhysicsContact) {
+    // check the contact.bodyA and contact.bodyB and see if you need to do something
+        if let asteroid = contact.bodyA.node as? Asteroid {
+            asteroid.collidedWith(contact.bodyB)
+        }
+    
+        if let asteroid = contact.bodyB.node as? Asteroid {
+            asteroid.collidedWith(contact.bodyA)
+        }
+    }
+    
 }

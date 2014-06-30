@@ -10,6 +10,7 @@ import SpriteKit
 
 class GameScene: SKScene {
     var _gamePaused = true
+    var _initialized = false;
     var _previousTime = 0.0
     var _deltaTime = 0.0
     let pressToStartLabel = SKLabelNode(fontNamed:"Helvetica")
@@ -43,7 +44,6 @@ class GameScene: SKScene {
         self.addChild(sprite)*/
         
     }
-    
     
     
 }

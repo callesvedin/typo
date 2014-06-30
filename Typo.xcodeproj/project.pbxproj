@@ -31,6 +31,9 @@
 		EBB6386B19605E9B00641CD1 /* grass.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6386A19605E9B00641CD1 /* grass.atlas */; };
 		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
 		EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13F1944B77900A50FFC /* SpaceScene.swift */; };
+		EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */; };
+		EBFB14FD1961FE0100E5EC76 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */; };
+		EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FE1962222F00E5EC76 /* GameObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		EBB6386A19605E9B00641CD1 /* grass.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grass.atlas; sourceTree = "<group>"; };
 		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
 		EBEFF13F1944B77900A50FFC /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
+		EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroundNode.swift; sourceTree = "<group>"; };
+		EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		EBFB14FE1962222F00E5EC76 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 				EB1193B81941AD0400A85A3F /* AppDelegate.swift */,
 				EB1193BA1941AD0400A85A3F /* GameScene.swift */,
 				EBEFF13F1944B77900A50FFC /* SpaceScene.swift */,
+				EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */,
 				EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */,
 				EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */,
 				EB1193BC1941AD0400A85A3F /* SpaceScene.sks */,
@@ -126,6 +133,8 @@
 				EB1193C01941AD0400A85A3F /* MainMenu.xib */,
 				EB1193B41941AD0400A85A3F /* Supporting Files */,
 				EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */,
+				EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */,
+				EBFB14FE1962222F00E5EC76 /* GameObject.swift */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
@@ -316,7 +325,10 @@
 			files = (
 				EB1193BB1941AD0400A85A3F /* GameScene.swift in Sources */,
 				EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */,
+				EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */,
+				EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */,
 				EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */,
+				EBFB14FD1961FE0100E5EC76 /* Asteroid.swift in Sources */,
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
 				EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */,
