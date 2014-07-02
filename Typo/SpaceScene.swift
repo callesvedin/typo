@@ -35,13 +35,13 @@ class SpaceScene:GameScene, SKPhysicsContactDelegate
             
             if currentTime - _lastDrop > 1 {
                 var characterIndex = randomGenerator.randomInt(0, to: _letters.count-1)
-                self.addChild(createCharacterNode(_letters[characterIndex]))
+                self.addChild(createAsteroidNode(_letters[characterIndex]))
                 _lastDrop = currentTime
             }
         }
     }
     
-    func createCharacterNode(letter: Character) ->SKNode {
+    func createAsteroidNode(letter: Character) ->SKNode {
         var position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
         return Asteroid(letter: letter,position:position)
     }

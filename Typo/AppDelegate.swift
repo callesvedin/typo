@@ -43,6 +43,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             self.skView!.showsFPS = true
             self.skView!.showsNodeCount = true
+            self.skView!.showsPhysics = false
         }
     }
     

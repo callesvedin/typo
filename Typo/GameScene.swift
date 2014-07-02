@@ -34,14 +34,6 @@ class GameScene: SKScene {
         _gamePaused = false
         pressToStartLabel.removeFromParent();
         println("Game started")
-/*        let sprite = SKSpriteNode(imageNamed:"Spaceship")
-        sprite.position = location;
-        sprite.setScale(0.2)
-        
-        let action = SKAction.rotateByAngle(M_PI, duration:1)
-        sprite.runAction(SKAction.repeatActionForever(action))
-        
-        self.addChild(sprite)*/
         
     }
     

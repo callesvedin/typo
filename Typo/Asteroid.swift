@@ -30,9 +30,9 @@ class Asteroid:GameObject {
 
     func setupNode()
     {
-        let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
-        burstNode.zPosition = -1
+//        let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
+//        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
+  //      burstNode.zPosition = -1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
         let myTexture = asteroidAtlas.textureNamed(textureName)
@@ -46,7 +46,7 @@ class Asteroid:GameObject {
         imageNode.anchorPoint = CGPoint(x:0.5,y:0.5)
         
 //        let parentNode = SKNode()
-        addChild(burstNode)
+//        addChild(burstNode)
         addChild(imageNode)
         physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
         
@@ -59,14 +59,27 @@ class Asteroid:GameObject {
         physicsBody.categoryBitMask = asteroidCategory
         physicsBody.collisionBitMask = groundCategory
         physicsBody.contactTestBitMask = groundCategory
+
         
-        let letterNode = SKLabelNode(text: String(letter))
-        letterNode.fontName="Helvetica"
-        letterNode.fontSize = 25;
-        letterNode.color = SKColor.whiteColor()
+        let attributes = [NSFontAttributeName:NSFont(name: "Helvetica", size:25),NSForegroundColorAttributeName:NSColor.whiteColor()]
+        
+        let ST = String(letter)
+        let myString: NSString = ST as NSString
+        let size: CGSize = myString.sizeWithAttributes(attributes)
+        
+        let image = NSImage(size: size)
+        image.lockFocus()
+        myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
+        image.unlockFocus()
+        let letterNode = SKSpriteNode(texture: SKTexture(image: image))
+        
+//        let letterNode = SKLabelNode(text: String(letter))
+//        letterNode.fontName="Helvetica"
+//        letterNode.fontSize = 25;
+//        letterNode.color = SKColor.whiteColor()
         //        letterNode.colorBlendFactor = 0.5
         letterNode.zPosition = 2
-        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
+//        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
         addChild(letterNode)
     }
     
