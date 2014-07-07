@@ -35,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let scene = SpaceScene.unarchiveFromFile("SpaceScene") as? SpaceScene {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
-
+            
             self.skView!.presentScene(scene)
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
