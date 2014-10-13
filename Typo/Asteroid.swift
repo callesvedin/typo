@@ -50,37 +50,40 @@ class Asteroid:GameObject {
         addChild(imageNode)
         physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
         
-        physicsBody.dynamic = true
-        physicsBody.allowsRotation = false
-        physicsBody.restitution = 1.0
-        physicsBody.friction = 0.0
-        physicsBody.angularDamping = 0.0
-        physicsBody.linearDamping = 0.0
-        physicsBody.categoryBitMask = asteroidCategory
-        physicsBody.collisionBitMask = groundCategory
-        physicsBody.contactTestBitMask = groundCategory
-
         
-        let attributes = [NSFontAttributeName:NSFont(name: "Helvetica", size:25),NSForegroundColorAttributeName:NSColor.whiteColor()]
+        physicsBody!.dynamic = true
+        physicsBody!.allowsRotation = false
+        physicsBody!.restitution = 1.0
+        physicsBody!.friction = 0.0
+        physicsBody!.angularDamping = 0.0
+        physicsBody!.linearDamping = 0.0
+        physicsBody!.categoryBitMask = asteroidCategory
+        physicsBody!.collisionBitMask = groundCategory
+        physicsBody!.contactTestBitMask = groundCategory
         
-        let ST = String(letter)
-        let myString: NSString = ST as NSString
-        let size: CGSize = myString.sizeWithAttributes(attributes)
+        if let f = NSFont(name: "Helvetica", size:25) {
+            let attributes = [NSFontAttributeName:f, NSForegroundColorAttributeName:NSColor.whiteColor()]
+            let ST = String(letter)
+            let myString: NSString = ST as NSString
+            let size: CGSize = myString.sizeWithAttributes(attributes)
+            let image = NSImage(size: size)
+            image.lockFocus()
+            myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
+            image.unlockFocus()
+            let letterNode = SKSpriteNode(texture: SKTexture(image: image))
+            //        let letterNode = SKLabelNode(text: String(letter))
+            //        letterNode.fontName="Helvetica"
+            //        letterNode.fontSize = 25;
+            //        letterNode.color = SKColor.whiteColor()
+            //        letterNode.colorBlendFactor = 0.5
+            letterNode.zPosition = 2
+            //        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
+            addChild(letterNode)
+        }else{
+            println("Jesus this sucks!")
+        }
         
-        let image = NSImage(size: size)
-        image.lockFocus()
-        myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
-        image.unlockFocus()
-        let letterNode = SKSpriteNode(texture: SKTexture(image: image))
         
-//        let letterNode = SKLabelNode(text: String(letter))
-//        letterNode.fontName="Helvetica"
-//        letterNode.fontSize = 25;
-//        letterNode.color = SKColor.whiteColor()
-        //        letterNode.colorBlendFactor = 0.5
-        letterNode.zPosition = 2
-//        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
-        addChild(letterNode)
     }
     
     func collidedWith(other: SKPhysicsBody) {
@@ -93,8 +96,8 @@ class Asteroid:GameObject {
         let fade = SKAction.fadeOutWithDuration(0.5)
         let remove = SKAction.runBlock({self.removeAllChildren();self.removeFromParent()})
         let sequence = SKAction.sequence([fade,remove])
-        physicsBody.dynamic=false;
-        physicsBody.velocity=CGVectorMake(0, 0)
+        physicsBody!.dynamic=false;
+        physicsBody!.velocity=CGVectorMake(0, 0)
         runAction(sequence)
 //        removeAllChildren()
 //        removeFromParent()

@@ -10,14 +10,14 @@ import SpriteKit
 
 class GroundNode:GameObject{
     
-    var imageNodes:SKSpriteNode[]
+    var imageNodes:[SKSpriteNode]
     let frameSize:CGSize
     let groundImage = SKSpriteNode(imageNamed: "SA-GroundG01.png")
     let w:CGFloat
     let h:CGFloat
     
     init(frameSize:CGSize) {
-        imageNodes=SKSpriteNode[]()
+        imageNodes=[SKSpriteNode]()
         self.frameSize=frameSize
         w = groundImage.size.width
         h = groundImage.size.height
@@ -40,12 +40,14 @@ class GroundNode:GameObject{
         physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width:nextXPosition+w,height:h), center:CGPoint(x: (nextXPosition+w)/2, y: h/2))
 //        physicsBody = SKPhysicsBody(rectangleOfSize: self.frame.size)
 
-        physicsBody.affectedByGravity = false
-        physicsBody.dynamic = false
-        physicsBody.allowsRotation = false
-        physicsBody.categoryBitMask = groundCategory;
-        physicsBody.collisionBitMask = asteroidCategory
-        physicsBody.contactTestBitMask = asteroidCategory
+        if physicsBody != nil {
+            physicsBody!.affectedByGravity = false
+            physicsBody!.dynamic = false
+            physicsBody!.allowsRotation = false
+            physicsBody!.categoryBitMask = groundCategory;
+            physicsBody!.collisionBitMask = asteroidCategory
+            physicsBody!.contactTestBitMask = asteroidCategory
+        }
         
     }
 }

@@ -12,7 +12,7 @@ class SpaceScene:GameScene, SKPhysicsContactDelegate
 {    
     let _dropRate = 1
     var _lastDrop = 0.0
-    var _letters: Character[] = ["a","s","d","f","j","k","l","ö"]
+    var _letters: [Character] = ["a","s","d","f","j","k","l","ö"]
     let randomGenerator = RandomNumberGenerator()
     
     override func didMoveToView(view: SKView) {
