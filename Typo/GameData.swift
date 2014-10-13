@@ -17,7 +17,7 @@ class GameData {
         level=0
         bossLevel=false
         let path = NSBundle.mainBundle().pathForResource("Levels",ofType:"plist")
-        levelArray = NSArray(contentsOfFile:path)
+        levelArray = NSArray(contentsOfFile:path!)!
 
     }
     

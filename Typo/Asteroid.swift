@@ -24,7 +24,7 @@ class Asteroid:GameObject {
     func setupNode()
     {
         let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
+        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as SKEmitterNode
         burstNode.zPosition = -1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
