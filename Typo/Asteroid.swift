@@ -14,39 +14,32 @@ class Asteroid:GameObject {
 
     init(letter:Character,position:CGPoint) {
         self.letter = letter
-
-//        frames = SKTexture[]()
-
-        
-//        frames.append(asteroidAtlas.textureNamed("asteroid_1"))
-//        frames.append(asteroidAtlas.textureNamed("asteroid_2"))
-//        frames.append(asteroidAtlas.textureNamed("asteroid_3"))
-//        frames.append(asteroidAtlas.textureNamed("asteroid_4"))
         super.init()
         self.position = position
         self.name="asteroid"
+        GameData.sharedInstance.getLetters()
         setupNode()
     }
 
     func setupNode()
     {
-//        let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-//        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
-  //      burstNode.zPosition = -1
+        let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
+        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath) as SKEmitterNode
+        burstNode.zPosition = -1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
         let myTexture = asteroidAtlas.textureNamed(textureName)
         let imageNode = SKSpriteNode(texture: myTexture)
         imageNode.setScale(0.3)
 
-  //      let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
-  //      let action = SKAction.repeatActionForever(SKAction.rotateByAngle(rotation, duration: NSTimeInterval(1)))
+//        let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
+//        let action = SKAction.repeatActionForever(SKAction.rotateByAngle(rotation, duration: NSTimeInterval(1)))
         //        imageNode.runAction(action)
         
         imageNode.anchorPoint = CGPoint(x:0.5,y:0.5)
         
-//        let parentNode = SKNode()
-//        addChild(burstNode)
+        let parentNode = SKNode()
+        addChild(burstNode)
         addChild(imageNode)
         physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
         

@@ -14,11 +14,13 @@ class SpaceScene:GameScene, SKPhysicsContactDelegate
     var _lastDrop = 0.0
     var _letters: [Character] = ["a","s","d","f","j","k","l","ö"]
     let randomGenerator = RandomNumberGenerator()
+    let levelLetters : String = GameData.sharedInstance.getLetters()
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view);
         backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1)
         self.physicsWorld.contactDelegate = self;
+
     }
     
     override func update(currentTime: CFTimeInterval) {
@@ -34,16 +36,27 @@ class SpaceScene:GameScene, SKPhysicsContactDelegate
             _previousTime = currentTime
             
             if currentTime - _lastDrop > 1 {
-                var characterIndex = randomGenerator.randomInt(0, to: _letters.count-1)
-                self.addChild(createAsteroidNode(_letters[characterIndex]))
+                self.addChild(createAsteroidNode())
                 _lastDrop = currentTime
             }
         }
     }
     
-    func createAsteroidNode(letter: Character) ->SKNode {
+    
+    
+    override func keyDown(event: NSEvent) {
+        println("Key code:\(event.keyCode)")
+        println("Key characters:\(event.characters)")
+        let c = Array(event.characters!)[0]
+        println("First character:\(c)")
+    }
+    
+    
+    func createAsteroidNode() ->SKNode {
+        var characterIndex = randomGenerator.randomInt(0, to: countElements(levelLetters)-1)
+        let letter = Array(levelLetters)[characterIndex]
         var position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
-        return Asteroid(letter: letter,position:position)
+        return Asteroid(letter: letter, position:position)
     }
     
     func createBackground()
