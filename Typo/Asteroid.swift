@@ -21,6 +21,7 @@ class Asteroid:GameObject {
         setupNode()
     }
 
+   
     func setupNode()
     {
         let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
@@ -30,6 +31,7 @@ class Asteroid:GameObject {
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
         let myTexture = asteroidAtlas.textureNamed(textureName)
         let imageNode = SKSpriteNode(texture: myTexture)
+//        imageNode.blendMode = SKBlendMode.Replace
         imageNode.setScale(0.3)
 
 //        let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
@@ -54,28 +56,14 @@ class Asteroid:GameObject {
         physicsBody!.collisionBitMask = groundCategory
         physicsBody!.contactTestBitMask = groundCategory
         
-        if let f = NSFont(name: "Helvetica", size:25) {
-            let attributes = [NSFontAttributeName:f, NSForegroundColorAttributeName:NSColor.whiteColor()]
-            let ST = String(letter)
-            let myString: NSString = ST as NSString
-            let size: CGSize = myString.sizeWithAttributes(attributes)
-            let image = NSImage(size: size)
-            image.lockFocus()
-            myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
-            image.unlockFocus()
-            let letterNode = SKSpriteNode(texture: SKTexture(image: image))
-            //        let letterNode = SKLabelNode(text: String(letter))
-            //        letterNode.fontName="Helvetica"
-            //        letterNode.fontSize = 25;
-            //        letterNode.color = SKColor.whiteColor()
-            //        letterNode.colorBlendFactor = 0.5
+        if let letterImage = CharacterImageFactory.shared.getImageForLetter(letter) {
+            let letterNode = SKSpriteNode(texture: SKTexture(image: letterImage))
             letterNode.zPosition = 2
             //        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
             addChild(letterNode)
         }else{
-            println("Jesus this sucks!")
-        }
-        
+            println("Could not create image for letter '\(letter)'")
+        }        
         
     }
     

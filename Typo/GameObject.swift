@@ -10,4 +10,5 @@ import SpriteKit
 class GameObject:SKNode{
     let asteroidCategory: UInt32 = 1 << 0
     let groundCategory: UInt32 = 1 << 1
+    
 }

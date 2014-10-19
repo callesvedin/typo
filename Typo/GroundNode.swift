@@ -32,6 +32,7 @@ class GroundNode:GameObject{
         var nextXPosition:CGFloat=0
         while(nextXPosition<self.frameSize.width){
             let sprite = groundImage.copy() as SKSpriteNode
+            sprite.blendMode = SKBlendMode.Replace
             sprite.position = CGPoint(x:nextXPosition,y:h)
             addChild(sprite)
             nextXPosition+=w

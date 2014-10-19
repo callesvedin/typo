@@ -18,6 +18,7 @@
 		EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2748B3196B479D00F1E9D7 /* GameData.swift */; };
 		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
 		EB68CDCE1969FBE1007C2582 /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB68CDCD1969FBE1007C2582 /* Levels.plist */; };
+		EBA3AEFF19F43D7D00B4AAE3 /* CharacterImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */; };
 		EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384519605CBA00641CD1 /* asteroid.atlas */; };
 		EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384619605CBA00641CD1 /* asteroid_fire.sks */; };
 		EBB6386019605CBA00641CD1 /* SA-GroundG01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */; };
@@ -66,6 +67,7 @@
 		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
 		EB68CDCD1969FBE1007C2582 /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
 		EB68CDCF1969FC12007C2582 /* ReadFiles.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReadFiles.playground; sourceTree = "<group>"; };
+		EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterImageFactory.swift; sourceTree = "<group>"; };
 		EBB6384519605CBA00641CD1 /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBB6384619605CBA00641CD1 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
 		EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SA-GroundG01.png"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */,
 				EBFB14FE1962222F00E5EC76 /* GameObject.swift */,
 				EB2748B3196B479D00F1E9D7 /* GameData.swift */,
+				EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
 				EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */,
+				EBA3AEFF19F43D7D00B4AAE3 /* CharacterImageFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
