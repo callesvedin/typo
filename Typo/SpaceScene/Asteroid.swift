@@ -77,8 +77,6 @@ class Asteroid:GameObject {
         physicsBody!.dynamic=false;
         physicsBody!.velocity=CGVectorMake(0, 0)
         runAction(sequence)
-//        removeAllChildren()
-//        removeFromParent()
     }
     
 }

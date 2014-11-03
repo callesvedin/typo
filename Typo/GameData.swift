@@ -8,17 +8,27 @@
 
 import Foundation
 
-class GameData {
+class GameData: CJCrashDelegate, CJHitDelegate {
     var level:Int
     var bossLevel :Bool
+    var progressChangeListener:CJProgressListenerProtocol?
+    
     let levelArray : NSArray
+    
+    var progress:CGFloat{
+        didSet {
+            if let progressListener = progressChangeListener {
+                progressChangeListener?.progressChanged(newValue:progress)
+            }            
+        }
+    }
     
     init(){
         level=0
         bossLevel=false
         let path = NSBundle.mainBundle().pathForResource("Levels",ofType:"plist")
         levelArray = NSArray(contentsOfFile:path!)!
-
+        progress=0.25
     }
     
     class var sharedInstance : GameData {
@@ -32,5 +42,14 @@ class GameData {
     func getLetters() -> String {
         let dict : NSDictionary = levelArray[level] as NSDictionary
         return dict.objectForKey("Characters") as String
-    }    
+    }
+    
+    func didCrash(letter: Character){
+        progress-=0.1
+    }
+    
+    func didHit(letter: Character){
+        progress+=0.05
+    }
+
 }

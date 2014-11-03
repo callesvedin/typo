@@ -17,7 +17,7 @@ extension SKNode {
             var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
+            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as SKScene
             archiver.finishDecoding()
             return scene
         } else {
@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         /* Pick a size for the scene */
-        if let scene = SpaceScene.unarchiveFromFile("SpaceScene") as? SpaceScene {
+        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
            // self.skView!.frameInterval = 2

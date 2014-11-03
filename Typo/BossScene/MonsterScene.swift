@@ -8,8 +8,7 @@
 
 import SpriteKit
 
-class MonsterScene:GameScene {
-
+class MonsterScene:SKScene {
     
     override func didMoveToView(view: SKView) {
         super.didMoveToView(view)
