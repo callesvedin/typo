@@ -19,6 +19,7 @@ class GameData: CJCrashDelegate, CJHitDelegate {
         didSet {
             if let progressListener = progressChangeListener {
                 progressChangeListener?.progressChanged(newValue:progress)
+                println("Progress changed to:\(progress)")
             }            
         }
     }
@@ -28,7 +29,7 @@ class GameData: CJCrashDelegate, CJHitDelegate {
         bossLevel=false
         let path = NSBundle.mainBundle().pathForResource("Levels",ofType:"plist")
         levelArray = NSArray(contentsOfFile:path!)!
-        progress=0.25
+        progress=0.5
     }
     
     class var sharedInstance : GameData {

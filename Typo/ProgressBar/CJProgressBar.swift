@@ -19,15 +19,16 @@ class ProgressBar:SKCropNode
             self.maskNode!.yScale=newValue
         }
     }
-    
-    
+        
 
     override init()
     {
         super.init()        
         let child = SKSpriteNode(imageNamed:"Progress")
         child.anchorPoint = CGPoint(x:0.5,y:0)
-        self.maskNode = SKSpriteNode(color:NSColor.whiteColor(),size:CGSize(width:child.size.width,height:child.size.height))
+        let mask = SKSpriteNode(color:NSColor.whiteColor(),size:CGSize(width:child.size.width,height:child.size.height))
+        mask.anchorPoint=CGPoint(x:0.5,y:0)
+        self.maskNode = mask
         self.addChild(child);
         
     }
