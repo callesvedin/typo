@@ -32,9 +32,12 @@ class GameScene: SKScene {
         
         let location = theEvent.locationInNode(self)
         _gamePaused = false
-        pressToStartLabel.removeFromParent();
-        println("Game started")
-        
+        pressToStartLabel.removeFromParent()
+        let progressBar = ProgressBar()
+        progressBar.position = CGPoint(x:self.size.width-40,y:self.size.height-200)
+        progressBar.progress = 0.5
+        self.addChild(progressBar)
+        println("Game started")        
     }
     
     

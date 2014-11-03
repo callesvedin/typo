@@ -17,10 +17,10 @@ class CharacterImageFactory{
         return Static.instance
     }
     
-    var characterImageMapping:Dictionary<Character,NSImage> = Dictionary<Character,NSImage>()
+    var characterImageMapping:Dictionary<Character,SKTexture> = Dictionary<Character,SKTexture>()
     
     
-    func getImageForLetter(character:Character)-> NSImage? {
+    func getImageForLetter(character:Character)-> SKTexture? {
         if var image = characterImageMapping[character] {
             return image
         }else{
@@ -32,9 +32,9 @@ class CharacterImageFactory{
         return nil;
     }
     
-    func createImage(character:Character)-> NSImage? {
+    func createImage(character:Character)-> SKTexture? {
         
-        if let f = NSFont(name: "Helvetica", size:28) {
+        if let f = NSFont(name: "Helvetica", size:36) {
             let attributes = [NSFontAttributeName:f, NSForegroundColorAttributeName:NSColor.whiteColor()]
             let ST = String(character)
             let myString: NSString = ST as NSString
@@ -43,7 +43,8 @@ class CharacterImageFactory{
             image.lockFocus()
             myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
             image.unlockFocus()
-            return image;
+            let texture = SKTexture(image: image)
+            return texture;
         }
         return nil;
     }

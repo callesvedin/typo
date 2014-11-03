@@ -10,32 +10,29 @@
 		EB1193B71941AD0400A85A3F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B61941AD0400A85A3F /* main.swift */; };
 		EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B81941AD0400A85A3F /* AppDelegate.swift */; };
 		EB1193BB1941AD0400A85A3F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193BA1941AD0400A85A3F /* GameScene.swift */; };
-		EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BC1941AD0400A85A3F /* SpaceScene.sks */; };
 		EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BE1941AD0400A85A3F /* Images.xcassets */; };
 		EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB1193C01941AD0400A85A3F /* MainMenu.xib */; };
 		EB1193CE1941AD0400A85A3F /* TypoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193CD1941AD0400A85A3F /* TypoTests.swift */; };
 		EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */; };
 		EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2748B3196B479D00F1E9D7 /* GameData.swift */; };
-		EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB60C8091944BC130071C5C1 /* MonsterScene.sks */; };
+		EB4490611A06DAC700A36093 /* CJProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4490601A06DAC700A36093 /* CJProgressBar.swift */; };
 		EB68CDCE1969FBE1007C2582 /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB68CDCD1969FBE1007C2582 /* Levels.plist */; };
-		EBA3AEFF19F43D7D00B4AAE3 /* CharacterImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */; };
 		EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384519605CBA00641CD1 /* asteroid.atlas */; };
 		EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384619605CBA00641CD1 /* asteroid_fire.sks */; };
 		EBB6386019605CBA00641CD1 /* SA-GroundG01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */; };
 		EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */; };
-		EBB6386219605CBA00641CD1 /* cecilharvey.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385019605CBA00641CD1 /* cecilharvey.png */; };
 		EBB6386319605CBA00641CD1 /* kainhighwind.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385119605CBA00641CD1 /* kainhighwind.atlas */; };
-		EBB6386419605CBA00641CD1 /* kainhighwind.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385219605CBA00641CD1 /* kainhighwind.png */; };
 		EBB6386519605CBA00641CD1 /* bahamut.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385419605CBA00641CD1 /* bahamut.atlas */; };
-		EBB6386619605CBA00641CD1 /* bahamut.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385519605CBA00641CD1 /* bahamut.png */; };
 		EBB6386719605CBA00641CD1 /* ifrit.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385619605CBA00641CD1 /* ifrit.atlas */; };
-		EBB6386819605CBA00641CD1 /* ifrit.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385719605CBA00641CD1 /* ifrit.png */; };
 		EBB6386919605CBA00641CD1 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = EBB6385819605CBA00641CD1 /* spark.png */; };
 		EBB6386B19605E9B00641CD1 /* grass.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6386A19605E9B00641CD1 /* grass.atlas */; };
-		EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */; };
-		EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFF13F1944B77900A50FFC /* SpaceScene.swift */; };
+		EBB9FAF01A07636A0057BB83 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAED1A07636A0057BB83 /* Asteroid.swift */; };
+		EBB9FAF11A07636A0057BB83 /* SpaceScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB9FAEE1A07636A0057BB83 /* SpaceScene.sks */; };
+		EBB9FAF21A07636A0057BB83 /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAEF1A07636A0057BB83 /* SpaceScene.swift */; };
+		EBB9FAF41A0763F00057BB83 /* CharacterImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAF31A0763F00057BB83 /* CharacterImageFactory.swift */; };
+		EBB9FAF71A0764280057BB83 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB9FAF51A0764280057BB83 /* MonsterScene.sks */; };
+		EBB9FAF81A0764280057BB83 /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAF61A0764280057BB83 /* MonsterScene.swift */; };
 		EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */; };
-		EBFB14FD1961FE0100E5EC76 /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */; };
 		EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FE1962222F00E5EC76 /* GameObject.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,36 +52,31 @@
 		EB1193B61941AD0400A85A3F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EB1193B81941AD0400A85A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB1193BA1941AD0400A85A3F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		EB1193BC1941AD0400A85A3F /* SpaceScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpaceScene.sks; sourceTree = "<group>"; };
 		EB1193BE1941AD0400A85A3F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB1193C11941AD0400A85A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EB1193C71941AD0400A85A3F /* TypoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1193CC1941AD0400A85A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB1193CD1941AD0400A85A3F /* TypoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypoTests.swift; sourceTree = "<group>"; };
-		EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SKPlaygroundTest.playground; sourceTree = "<group>"; };
 		EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomNumberGenerator.swift; sourceTree = "<group>"; };
 		EB2748B3196B479D00F1E9D7 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		EB60C8091944BC130071C5C1 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MonsterScene.sks; sourceTree = "<group>"; };
+		EB4490601A06DAC700A36093 /* CJProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CJProgressBar.swift; path = ProgressBar/CJProgressBar.swift; sourceTree = "<group>"; };
 		EB68CDCD1969FBE1007C2582 /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
-		EB68CDCF1969FC12007C2582 /* ReadFiles.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReadFiles.playground; sourceTree = "<group>"; };
-		EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterImageFactory.swift; sourceTree = "<group>"; };
 		EBB6384519605CBA00641CD1 /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBB6384619605CBA00641CD1 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
 		EBB6384D19605CBA00641CD1 /* SA-GroundG01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SA-GroundG01.png"; sourceTree = "<group>"; };
 		EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cecilharvey.atlas; sourceTree = "<group>"; };
-		EBB6385019605CBA00641CD1 /* cecilharvey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cecilharvey.png; sourceTree = "<group>"; };
 		EBB6385119605CBA00641CD1 /* kainhighwind.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = kainhighwind.atlas; sourceTree = "<group>"; };
-		EBB6385219605CBA00641CD1 /* kainhighwind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kainhighwind.png; sourceTree = "<group>"; };
 		EBB6385419605CBA00641CD1 /* bahamut.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = bahamut.atlas; sourceTree = "<group>"; };
-		EBB6385519605CBA00641CD1 /* bahamut.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bahamut.png; sourceTree = "<group>"; };
 		EBB6385619605CBA00641CD1 /* ifrit.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = ifrit.atlas; sourceTree = "<group>"; };
-		EBB6385719605CBA00641CD1 /* ifrit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ifrit.png; sourceTree = "<group>"; };
 		EBB6385819605CBA00641CD1 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		EBB6386A19605E9B00641CD1 /* grass.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = grass.atlas; sourceTree = "<group>"; };
-		EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterScene.swift; sourceTree = "<group>"; };
-		EBEFF13F1944B77900A50FFC /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
+		EBB9FAED1A07636A0057BB83 /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Asteroid.swift; path = SpaceScene/Asteroid.swift; sourceTree = "<group>"; };
+		EBB9FAEE1A07636A0057BB83 /* SpaceScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = SpaceScene.sks; path = SpaceScene/SpaceScene.sks; sourceTree = "<group>"; };
+		EBB9FAEF1A07636A0057BB83 /* SpaceScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpaceScene.swift; path = SpaceScene/SpaceScene.swift; sourceTree = "<group>"; };
+		EBB9FAF31A0763F00057BB83 /* CharacterImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterImageFactory.swift; path = SpaceScene/CharacterImageFactory.swift; sourceTree = "<group>"; };
+		EBB9FAF51A0764280057BB83 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MonsterScene.sks; path = BossScene/MonsterScene.sks; sourceTree = "<group>"; };
+		EBB9FAF61A0764280057BB83 /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonsterScene.swift; path = BossScene/MonsterScene.swift; sourceTree = "<group>"; };
 		EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroundNode.swift; sourceTree = "<group>"; };
-		EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		EBFB14FE1962222F00E5EC76 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,24 +119,19 @@
 		EB1193B31941AD0400A85A3F /* Typo */ = {
 			isa = PBXGroup;
 			children = (
-				EB68CDCF1969FC12007C2582 /* ReadFiles.playground */,
+				EBB9FAEC1A07616A0057BB83 /* BossScene */,
+				EBB9FAEB1A0761580057BB83 /* SpaceScene */,
+				EB44905F1A06DA8500A36093 /* ProgressBar */,
 				EBB6384419605CBA00641CD1 /* resources */,
 				EB1193B81941AD0400A85A3F /* AppDelegate.swift */,
 				EB1193BA1941AD0400A85A3F /* GameScene.swift */,
-				EBEFF13F1944B77900A50FFC /* SpaceScene.swift */,
-				EBFB14FC1961FE0100E5EC76 /* Asteroid.swift */,
-				EBEFF13D1944B72E00A50FFC /* MonsterScene.swift */,
 				EB1193D81942727200A85A3F /* RandomNumberGenerator.swift */,
-				EB1193BC1941AD0400A85A3F /* SpaceScene.sks */,
-				EB60C8091944BC130071C5C1 /* MonsterScene.sks */,
 				EB1193BE1941AD0400A85A3F /* Images.xcassets */,
 				EB1193C01941AD0400A85A3F /* MainMenu.xib */,
 				EB1193B41941AD0400A85A3F /* Supporting Files */,
-				EB1193D71942676600A85A3F /* SKPlaygroundTest.playground */,
 				EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */,
 				EBFB14FE1962222F00E5EC76 /* GameObject.swift */,
 				EB2748B3196B479D00F1E9D7 /* GameData.swift */,
-				EBA3AEFE19F43D7D00B4AAE3 /* CharacterImageFactory.swift */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
@@ -175,6 +162,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		EB44905F1A06DA8500A36093 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				EB4490601A06DAC700A36093 /* CJProgressBar.swift */,
+			);
+			name = ProgressBar;
+			sourceTree = "<group>";
+		};
 		EBB6384419605CBA00641CD1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,9 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */,
-				EBB6385019605CBA00641CD1 /* cecilharvey.png */,
 				EBB6385119605CBA00641CD1 /* kainhighwind.atlas */,
-				EBB6385219605CBA00641CD1 /* kainhighwind.png */,
 			);
 			path = hero;
 			sourceTree = "<group>";
@@ -213,11 +206,29 @@
 			isa = PBXGroup;
 			children = (
 				EBB6385419605CBA00641CD1 /* bahamut.atlas */,
-				EBB6385519605CBA00641CD1 /* bahamut.png */,
 				EBB6385619605CBA00641CD1 /* ifrit.atlas */,
-				EBB6385719605CBA00641CD1 /* ifrit.png */,
 			);
 			path = monster;
+			sourceTree = "<group>";
+		};
+		EBB9FAEB1A0761580057BB83 /* SpaceScene */ = {
+			isa = PBXGroup;
+			children = (
+				EBB9FAF31A0763F00057BB83 /* CharacterImageFactory.swift */,
+				EBB9FAED1A07636A0057BB83 /* Asteroid.swift */,
+				EBB9FAEE1A07636A0057BB83 /* SpaceScene.sks */,
+				EBB9FAEF1A07636A0057BB83 /* SpaceScene.swift */,
+			);
+			name = SpaceScene;
+			sourceTree = "<group>";
+		};
+		EBB9FAEC1A07616A0057BB83 /* BossScene */ = {
+			isa = PBXGroup;
+			children = (
+				EBB9FAF51A0764280057BB83 /* MonsterScene.sks */,
+				EBB9FAF61A0764280057BB83 /* MonsterScene.swift */,
+			);
+			name = BossScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,20 +311,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB1193BD1941AD0400A85A3F /* SpaceScene.sks in Resources */,
-				EBB6386219605CBA00641CD1 /* cecilharvey.png in Resources */,
-				EB60C80A1944BC130071C5C1 /* MonsterScene.sks in Resources */,
 				EBB6386719605CBA00641CD1 /* ifrit.atlas in Resources */,
 				EBB6386319605CBA00641CD1 /* kainhighwind.atlas in Resources */,
+				EBB9FAF11A07636A0057BB83 /* SpaceScene.sks in Resources */,
 				EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */,
 				EBB6386B19605E9B00641CD1 /* grass.atlas in Resources */,
-				EBB6386619605CBA00641CD1 /* bahamut.png in Resources */,
 				EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */,
 				EBB6386919605CBA00641CD1 /* spark.png in Resources */,
-				EBB6386419605CBA00641CD1 /* kainhighwind.png in Resources */,
+				EBB9FAF71A0764280057BB83 /* MonsterScene.sks in Resources */,
 				EBB6386519605CBA00641CD1 /* bahamut.atlas in Resources */,
 				EBB6386019605CBA00641CD1 /* SA-GroundG01.png in Resources */,
-				EBB6386819605CBA00641CD1 /* ifrit.png in Resources */,
 				EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */,
 				EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */,
 				EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */,
@@ -336,16 +343,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB1193BB1941AD0400A85A3F /* GameScene.swift in Sources */,
+				EBB9FAF41A0763F00057BB83 /* CharacterImageFactory.swift in Sources */,
+				EBB9FAF21A07636A0057BB83 /* SpaceScene.swift in Sources */,
 				EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */,
-				EBEFF13E1944B72E00A50FFC /* MonsterScene.swift in Sources */,
 				EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */,
 				EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */,
+				EB4490611A06DAC700A36093 /* CJProgressBar.swift in Sources */,
 				EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */,
-				EBFB14FD1961FE0100E5EC76 /* Asteroid.swift in Sources */,
+				EBB9FAF81A0764280057BB83 /* MonsterScene.swift in Sources */,
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
-				EBEFF1401944B77900A50FFC /* SpaceScene.swift in Sources */,
-				EBA3AEFF19F43D7D00B4AAE3 /* CharacterImageFactory.swift in Sources */,
+				EBB9FAF01A07636A0057BB83 /* Asteroid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

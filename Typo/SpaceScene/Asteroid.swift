@@ -26,45 +26,42 @@ class Asteroid:GameObject {
     {
         let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
         let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as SKEmitterNode
-        burstNode.zPosition = -1
+        burstNode.zPosition = 1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
-        let myTexture = asteroidAtlas.textureNamed(textureName)
-        let imageNode = SKSpriteNode(texture: myTexture)
+        let asteroidTexure = asteroidAtlas.textureNamed(textureName)
+        let imageNode = SKSpriteNode(texture: asteroidTexure)
 //        imageNode.blendMode = SKBlendMode.Replace
-        imageNode.setScale(0.3)
+//        imageNode.setScale(0.5)
 
 //        let rotation = ((randomGenerator.randomInt(1, to: 2) % 2==0) ? -1:1)*M_PI
 //        let action = SKAction.repeatActionForever(SKAction.rotateByAngle(rotation, duration: NSTimeInterval(1)))
-        //        imageNode.runAction(action)
         
         imageNode.anchorPoint = CGPoint(x:0.5,y:0.5)
-        
-        let parentNode = SKNode()
-        addChild(burstNode)
-        addChild(imageNode)
+        imageNode.zPosition = 2
         physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
-        
-        
+//
         physicsBody!.dynamic = true
         physicsBody!.allowsRotation = false
-        physicsBody!.restitution = 1.0
+        physicsBody!.restitution = 0.0
         physicsBody!.friction = 0.0
         physicsBody!.angularDamping = 0.0
         physicsBody!.linearDamping = 0.0
         physicsBody!.categoryBitMask = asteroidCategory
         physicsBody!.collisionBitMask = groundCategory
         physicsBody!.contactTestBitMask = groundCategory
+
         
         if let letterImage = CharacterImageFactory.shared.getImageForLetter(letter) {
-            let letterNode = SKSpriteNode(texture: SKTexture(image: letterImage))
-            letterNode.zPosition = 2
-            //        letterNode.verticalAlignmentMode = SKLabelVerticalAlignmentMode.Center //SKLabelVerticalAlignmentModeCenter
-            addChild(letterNode)
+            let letterNode = SKSpriteNode(texture: letterImage)
+            letterNode.zPosition = 3
+            letterNode.anchorPoint=CGPoint(x:0.5,y:0.5)
+            imageNode.addChild(letterNode)
         }else{
             println("Could not create image for letter '\(letter)'")
-        }        
-        
+        }
+        addChild(imageNode)
+        addChild(burstNode)
     }
     
     func collidedWith(other: SKPhysicsBody) {
