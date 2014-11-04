@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Typo
 //
-//  Created by Carl-Johan Svedin on 2014-06-06.
-//  Copyright (c) 2014 Carl-Johan Svedin. All rights reserved.
+//  Created by carl-johan.svedin on 2014-10-13.
+//  Copyright (c) 2014 carl-johan.svedin. All rights reserved.
 //
 
 
@@ -12,30 +12,31 @@ import SpriteKit
 
 extension SKNode {
     class func unarchiveFromFile(file : NSString) -> SKNode? {
-        
-        let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks")
-        
-        var sceneData = NSData.dataWithContentsOfFile(path, options: .DataReadingMappedIfSafe, error: nil)
-        var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-        
-        archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-        let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
-        archiver.finishDecoding()
-        return scene
+        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
+            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
+            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            
+            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as SKScene
+            archiver.finishDecoding()
+            return scene
+        } else {
+            return nil
+        }
     }
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    @IBOutlet var window: NSWindow
-    @IBOutlet var skView: SKView
+    @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var skView: SKView!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
         /* Pick a size for the scene */
-        if let scene = MonsterScene.unarchiveFromFile("MonsterScene") as? MonsterScene {
+        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
-
+           // self.skView!.frameInterval = 2
             self.skView!.presentScene(scene)
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
@@ -43,10 +44,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             self.skView!.showsFPS = true
             self.skView!.showsNodeCount = true
+            self.skView!.showsPhysics = false
+//            self.skView!.showsFields = true
+            
         }
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
-        return true;
+        return true
     }
 }
+
