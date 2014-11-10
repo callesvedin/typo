@@ -42,6 +42,7 @@ class Asteroid:GameObject {
         physicsBody = SKPhysicsBody(circleOfRadius: imageNode.frame.width/2)
 //
         physicsBody!.dynamic = true
+        physicsBody!.affectedByGravity = true
         physicsBody!.allowsRotation = false
         physicsBody!.restitution = 0.0
         physicsBody!.friction = 0.0
@@ -50,8 +51,8 @@ class Asteroid:GameObject {
         physicsBody!.categoryBitMask = asteroidCategory
         physicsBody!.collisionBitMask = groundCategory
         physicsBody!.contactTestBitMask = groundCategory
-
-        
+        let randomSpeed = GameData.sharedInstance.getRandomSpeed()
+        physicsBody!.velocity = CGVectorMake(0,randomSpeed)
         if let letterImage = CharacterImageFactory.shared.getImageForLetter(letter) {
             let letterNode = SKSpriteNode(texture: letterImage)
             letterNode.zPosition = 3
@@ -68,6 +69,21 @@ class Asteroid:GameObject {
         if let ground = other.node as? GroundNode {
             explode()
         }
+    }
+    
+    func hit(){
+        let burstPath = NSBundle.mainBundle().pathForResource("explosion", ofType: "sks")
+        let explosionNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as SKEmitterNode
+        explosionNode.zPosition = 3
+        self.addChild(explosionNode);
+        
+        let fade = SKAction.fadeOutWithDuration(0.3)
+        let remove = SKAction.runBlock({self.removeAllChildren();self.removeFromParent()})
+        
+        let sequence = SKAction.sequence([fade,remove])
+        physicsBody!.dynamic=false;
+        physicsBody!.velocity=CGVectorMake(0, 0)
+        runAction(sequence)
     }
     
     func explode(){

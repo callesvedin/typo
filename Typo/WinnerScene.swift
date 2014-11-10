@@ -1,22 +1,23 @@
 //
-//  StartScene.swift
+//  DeathScene.swift
 //  Typo
 //
-//  Created by carl-johan.svedin on 2014-11-03.
+//  Created by carl-johan.svedin on 2014-11-07.
 //  Copyright (c) 2014 Carl-Johan Svedin. All rights reserved.
 //
 
 import SpriteKit
 
-class StartScene: SKScene {
+class WinnerScene:SKScene
+{
     override func didMoveToView(view: SKView) {
         paused=true
     }
     
     override func mouseDown(theEvent: NSEvent) {
-        changeView()        
+        changeView()
     }
-
+    
     override func keyDown(event: NSEvent)
     {
         changeView()
@@ -30,11 +31,9 @@ class StartScene: SKScene {
         GameData.sharedInstance.increaseLevel()
         self.view!.presentScene(spaceScene, transition: reveal)
     }
-
     
     override func willMoveFromView(view: SKView) {
         view.paused=false
     }
-}
 
-    
+}

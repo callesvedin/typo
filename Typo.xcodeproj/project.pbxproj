@@ -22,6 +22,12 @@
 		EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2748B3196B479D00F1E9D7 /* GameData.swift */; };
 		EB4490611A06DAC700A36093 /* CJProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4490601A06DAC700A36093 /* CJProgressBar.swift */; };
 		EB68CDCE1969FBE1007C2582 /* Levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB68CDCD1969FBE1007C2582 /* Levels.plist */; };
+		EB71B4E71A115CC000A2D7B7 /* UserWonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */; };
+		EB71B4E91A115DD400A2D7B7 /* WinnerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */; };
+		EB71B4EB1A115DE900A2D7B7 /* WinnerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */; };
+		EB9CB6DB1A0D57960077DC27 /* DeathScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */; };
+		EB9CB6DD1A0D584B0077DC27 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */; };
+		EB9CB6DF1A0D58C30077DC27 /* GameOverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */; };
 		EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384519605CBA00641CD1 /* asteroid.atlas */; };
 		EBB6385A19605CBA00641CD1 /* asteroid_fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384619605CBA00641CD1 /* asteroid_fire.sks */; };
 		EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */ = {isa = PBXBuildFile; fileRef = EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */; };
@@ -36,6 +42,7 @@
 		EBB9FAF41A0763F00057BB83 /* CharacterImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAF31A0763F00057BB83 /* CharacterImageFactory.swift */; };
 		EBB9FAF71A0764280057BB83 /* MonsterScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBB9FAF51A0764280057BB83 /* MonsterScene.sks */; };
 		EBB9FAF81A0764280057BB83 /* MonsterScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB9FAF61A0764280057BB83 /* MonsterScene.swift */; };
+		EBD0A3FF1A101A5F00D71D2A /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = EBD0A3FE1A101A5F00D71D2A /* explosion.sks */; };
 		EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */; };
 		EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB14FE1962222F00E5EC76 /* GameObject.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +77,12 @@
 		EB2748B3196B479D00F1E9D7 /* GameData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		EB4490601A06DAC700A36093 /* CJProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CJProgressBar.swift; path = ProgressBar/CJProgressBar.swift; sourceTree = "<group>"; };
 		EB68CDCD1969FBE1007C2582 /* Levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Levels.plist; sourceTree = "<group>"; };
+		EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWonDelegate.swift; sourceTree = "<group>"; };
+		EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinnerScene.sks; sourceTree = "<group>"; };
+		EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerScene.swift; sourceTree = "<group>"; };
+		EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DeathScene.sks; sourceTree = "<group>"; };
+		EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
+		EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverDelegate.swift; sourceTree = "<group>"; };
 		EBB6384519605CBA00641CD1 /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBB6384619605CBA00641CD1 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
 		EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cecilharvey.atlas; sourceTree = "<group>"; };
@@ -84,6 +97,7 @@
 		EBB9FAF31A0763F00057BB83 /* CharacterImageFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterImageFactory.swift; path = SpaceScene/CharacterImageFactory.swift; sourceTree = "<group>"; };
 		EBB9FAF51A0764280057BB83 /* MonsterScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = MonsterScene.sks; path = BossScene/MonsterScene.sks; sourceTree = "<group>"; };
 		EBB9FAF61A0764280057BB83 /* MonsterScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonsterScene.swift; path = BossScene/MonsterScene.swift; sourceTree = "<group>"; };
+		EBD0A3FE1A101A5F00D71D2A /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
 		EBFB14FA1961F9A000E5EC76 /* GroundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroundNode.swift; sourceTree = "<group>"; };
 		EBFB14FE1962222F00E5EC76 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +157,10 @@
 				EB2262A01A0816B5001CE4BA /* StartScene.swift */,
 				EB2262A21A081E51001CE4BA /* StartScene.sks */,
 				EB2262A81A083904001CE4BA /* CJProgressListenerProtocol.swift */,
+				EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */,
+				EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */,
+				EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */,
+				EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
@@ -199,6 +217,7 @@
 				EBB6385319605CBA00641CD1 /* monster */,
 				EBB6385819605CBA00641CD1 /* spark.png */,
 				EB68CDCD1969FBE1007C2582 /* Levels.plist */,
+				EBD0A3FE1A101A5F00D71D2A /* explosion.sks */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -238,6 +257,8 @@
 				EBB9FAEF1A07636A0057BB83 /* SpaceScene.swift */,
 				EB2262A41A0835F1001CE4BA /* CJCrashDelegate.swift */,
 				EB2262A61A083797001CE4BA /* CJHitDelegate.swift */,
+				EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */,
+				EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */,
 			);
 			name = SpaceScene;
 			sourceTree = "<group>";
@@ -341,8 +362,11 @@
 				EBB6386919605CBA00641CD1 /* spark.png in Resources */,
 				EBB9FAF71A0764280057BB83 /* MonsterScene.sks in Resources */,
 				EBB6386519605CBA00641CD1 /* bahamut.atlas in Resources */,
+				EB9CB6DB1A0D57960077DC27 /* DeathScene.sks in Resources */,
 				EB1193C21941AD0400A85A3F /* MainMenu.xib in Resources */,
+				EB71B4E91A115DD400A2D7B7 /* WinnerScene.sks in Resources */,
 				EBB6385919605CBA00641CD1 /* asteroid.atlas in Resources */,
+				EBD0A3FF1A101A5F00D71D2A /* explosion.sks in Resources */,
 				EBB6386119605CBA00641CD1 /* cecilharvey.atlas in Resources */,
 				EB68CDCE1969FBE1007C2582 /* Levels.plist in Resources */,
 			);
@@ -364,6 +388,7 @@
 			files = (
 				EBB9FAF41A0763F00057BB83 /* CharacterImageFactory.swift in Sources */,
 				EBB9FAF21A07636A0057BB83 /* SpaceScene.swift in Sources */,
+				EB9CB6DF1A0D58C30077DC27 /* GameOverDelegate.swift in Sources */,
 				EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */,
 				EBFB14FF1962222F00E5EC76 /* GameObject.swift in Sources */,
 				EBFB14FB1961F9A000E5EC76 /* GroundNode.swift in Sources */,
@@ -374,10 +399,13 @@
 				EBB9FAF81A0764280057BB83 /* MonsterScene.swift in Sources */,
 				EB2262A91A083904001CE4BA /* CJProgressListenerProtocol.swift in Sources */,
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
+				EB71B4EB1A115DE900A2D7B7 /* WinnerScene.swift in Sources */,
 				EB2262A51A0835F1001CE4BA /* CJCrashDelegate.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
 				EBB9FAF01A07636A0057BB83 /* Asteroid.swift in Sources */,
+				EB9CB6DD1A0D584B0077DC27 /* DeathScene.swift in Sources */,
 				EB2262A71A083797001CE4BA /* CJHitDelegate.swift in Sources */,
+				EB71B4E71A115CC000A2D7B7 /* UserWonDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

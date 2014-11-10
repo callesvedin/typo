@@ -9,18 +9,18 @@
 import Foundation
 
 class GameData: CJCrashDelegate, CJHitDelegate {
+    let randomGenerator = RandomNumberGenerator()
     var level:Int
     var bossLevel :Bool
     var progressChangeListener:CJProgressListenerProtocol?
-    
+    var gameOverDelegate:GameOverDelegate?
+    var userWonDelegate:UserWonDelegate?
     let levelArray : NSArray
     
     var progress:CGFloat{
         didSet {
-            if let progressListener = progressChangeListener {
                 progressChangeListener?.progressChanged(newValue:progress)
                 println("Progress changed to:\(progress)")
-            }            
         }
     }
     
@@ -40,17 +40,41 @@ class GameData: CJCrashDelegate, CJHitDelegate {
         return Static.instance
     }
     
+    func increaseLevel(){
+        level++
+        progress=0.5
+    }
+    
+    func getRandomSpeed() -> CGFloat {
+        let randomSpeed = randomGenerator.randomInt(1, to: 3)
+        let levelDictionary = getLevelDictionary()
+        return (levelDictionary.objectForKey("asteroidspeed_\(randomSpeed)") as CGFloat)
+    }
+    
+    func getLevelDictionary() -> NSDictionary
+    {
+        return levelArray[level] as NSDictionary
+    }
+    
+    
     func getLetters() -> String {
-        let dict : NSDictionary = levelArray[level] as NSDictionary
+        let dict = getLevelDictionary()
         return dict.objectForKey("Characters") as String
     }
     
     func didCrash(letter: Character){
         progress-=0.1
+        if progress<0 {
+            gameOverDelegate?.userDied()
+        }
     }
     
     func didHit(letter: Character){
         progress+=0.05
+        if progress>1 {
+            userWonDelegate?.userWon()
+        }
+
     }
 
 }

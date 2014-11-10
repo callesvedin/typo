@@ -3,32 +3,48 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>Maxspeed</key>
-		<string>100</string>
+		<key>asteroidspeed_1</key>
+		<integer>10</integer>
+		<key>asteroidspeed_2</key>
+		<integer>50</integer>
+		<key>asteroidspeed_3</key>
+		<integer>100</integer>
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
 		<key>Characters</key>
 		<string>asdfjklö</string>
 	</dict>
 	<dict>
-		<key>Maxspeed</key>
-		<string>100</string>
+        <key>asteroidspeed_1</key>
+        <integer>10</integer>
+        <key>asteroidspeed_2</key>
+        <integer>50</integer>
+        <key>asteroidspeed_3</key>
+        <integer>100</integer>
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
 		<key>Characters</key>
 		<string>asdfjklöqweruiop</string>
 	</dict>
 	<dict>
-		<key>Maxspeed</key>
-		<string>120</string>
+        <key>asteroidspeed_1</key>
+        <integer>10</integer>
+        <key>asteroidspeed_2</key>
+        <integer>50</integer>
+        <key>asteroidspeed_3</key>
+        <integer>100</integer>
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
 		<key>Characters</key>
 		<string>asdfjklöqweruiopzxcvm</string>
 	</dict>
 	<dict>
-		<key>Maxspeed</key>
-		<string>150</string>
+        <key>asteroidspeed_1</key>
+        <integer>10</integer>
+        <key>asteroidspeed_2</key>
+        <integer>50</integer>
+        <key>asteroidspeed_3</key>
+        <integer>100</integer>        
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
 		<key>Characters</key>
