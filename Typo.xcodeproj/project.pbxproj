@@ -83,6 +83,7 @@
 		EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DeathScene.sks; sourceTree = "<group>"; };
 		EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
 		EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverDelegate.swift; sourceTree = "<group>"; };
+		EBAEDBD11A1A856300C04F33 /* Keyboard.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Keyboard.playground; sourceTree = "<group>"; };
 		EBB6384519605CBA00641CD1 /* asteroid.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = asteroid.atlas; sourceTree = "<group>"; };
 		EBB6384619605CBA00641CD1 /* asteroid_fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = asteroid_fire.sks; sourceTree = "<group>"; };
 		EBB6384F19605CBA00641CD1 /* cecilharvey.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = cecilharvey.atlas; sourceTree = "<group>"; };
@@ -161,6 +162,7 @@
 				EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */,
 				EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */,
 				EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */,
+				EBAEDBD11A1A856300C04F33 /* Keyboard.playground */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
