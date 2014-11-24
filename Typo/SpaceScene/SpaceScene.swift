@@ -98,13 +98,18 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     func createAsteroidNode() ->SKNode {
         var characterIndex = randomGenerator.randomInt(0, to: countElements(levelLetters)-1)
         let letter = Array(levelLetters)[characterIndex]
-        var position = CGPoint(x:randomGenerator.randomInt(0, to: Int(frame.width)),y:Int(frame.height))
-        return Asteroid(letter: letter, position:position)
+        let asteroid = Asteroid(letter: letter)
+        asteroid.position = CGPoint(x:randomGenerator.randomInt(Int(asteroid.frame.size.width), to: Int(frame.width-100)),y:Int(frame.height))
+        return asteroid
     }
     
     
     func createBackground()
     {
+        let background = SKSpriteNode(imageNamed: "stars")
+        background.position = CGPoint(x:self.frame.size.width/2,y:self.frame.size.height/2)
+        addChild(background)
+
         addChild(GroundNode(frameSize:frame.size))
     }
     

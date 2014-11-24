@@ -16,13 +16,16 @@ class DeathScene:SKScene
     
     override func mouseDown(theEvent: NSEvent) {
         /* Called when a mouse click occurs */
-        let reveal = SKTransition.fadeWithDuration(3)
-        let spaceScene = SpaceScene(size: self.frame.size)
-        spaceScene.scaleMode = SKSceneScaleMode.AspectFill;
-        self.view!.presentScene(spaceScene, transition: reveal)
         
+        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
+            let reveal = SKTransition.fadeWithDuration(3)
+            scene.scaleMode = SKSceneScaleMode.AspectFill;
+            self.view!.presentScene(scene, transition: reveal)
+        }
+            
         println("Game started")
     }
+    
     override func willMoveFromView(view: SKView) {
         view.paused=false
     }

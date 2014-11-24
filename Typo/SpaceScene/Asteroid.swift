@@ -12,10 +12,9 @@ class Asteroid:GameObject {
     let letter:Character
     let randomGenerator = RandomNumberGenerator()
 
-    init(letter:Character,position:CGPoint) {
+    init(letter:Character) {
         self.letter = letter
         super.init()
-        self.position = position
         self.name="asteroid"
         GameData.sharedInstance.getLetters()
         setupNode()
