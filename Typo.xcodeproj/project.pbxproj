@@ -25,6 +25,8 @@
 		EB71B4E71A115CC000A2D7B7 /* UserWonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */; };
 		EB71B4E91A115DD400A2D7B7 /* WinnerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */; };
 		EB71B4EB1A115DE900A2D7B7 /* WinnerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */; };
+		EB804F3D1A23DE1200F3504B /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB804F3C1A23DE1200F3504B /* Keyboard.swift */; };
+		EB804F3F1A23DE5F00F3504B /* KeyNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB804F3E1A23DE5F00F3504B /* KeyNode.swift */; };
 		EB9CB6DB1A0D57960077DC27 /* DeathScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */; };
 		EB9CB6DD1A0D584B0077DC27 /* DeathScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */; };
 		EB9CB6DF1A0D58C30077DC27 /* GameOverDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */; };
@@ -80,6 +82,8 @@
 		EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWonDelegate.swift; sourceTree = "<group>"; };
 		EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinnerScene.sks; sourceTree = "<group>"; };
 		EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerScene.swift; sourceTree = "<group>"; };
+		EB804F3C1A23DE1200F3504B /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keyboard.swift; path = Keyboard/Keyboard.swift; sourceTree = "<group>"; };
+		EB804F3E1A23DE5F00F3504B /* KeyNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyNode.swift; path = Keyboard/KeyNode.swift; sourceTree = "<group>"; };
 		EB9CB6DA1A0D57960077DC27 /* DeathScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DeathScene.sks; sourceTree = "<group>"; };
 		EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeathScene.swift; sourceTree = "<group>"; };
 		EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverDelegate.swift; sourceTree = "<group>"; };
@@ -162,7 +166,7 @@
 				EB9CB6DC1A0D584B0077DC27 /* DeathScene.swift */,
 				EB71B4E81A115DD400A2D7B7 /* WinnerScene.sks */,
 				EB71B4EA1A115DE900A2D7B7 /* WinnerScene.swift */,
-				EBAEDBD11A1A856300C04F33 /* Keyboard.playground */,
+				EB804F401A23DED200F3504B /* Keyboard */,
 			);
 			path = Typo;
 			sourceTree = "<group>";
@@ -207,6 +211,16 @@
 				EB4490601A06DAC700A36093 /* CJProgressBar.swift */,
 			);
 			name = ProgressBar;
+			sourceTree = "<group>";
+		};
+		EB804F401A23DED200F3504B /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEDBD11A1A856300C04F33 /* Keyboard.playground */,
+				EB804F3C1A23DE1200F3504B /* Keyboard.swift */,
+				EB804F3E1A23DE5F00F3504B /* KeyNode.swift */,
+			);
+			name = Keyboard;
 			sourceTree = "<group>";
 		};
 		EBB6384419605CBA00641CD1 /* resources */ = {
@@ -389,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB9FAF41A0763F00057BB83 /* CharacterImageFactory.swift in Sources */,
+				EB804F3F1A23DE5F00F3504B /* KeyNode.swift in Sources */,
 				EBB9FAF21A07636A0057BB83 /* SpaceScene.swift in Sources */,
 				EB9CB6DF1A0D58C30077DC27 /* GameOverDelegate.swift in Sources */,
 				EB2748B4196B479D00F1E9D7 /* GameData.swift in Sources */,
@@ -404,6 +419,7 @@
 				EB71B4EB1A115DE900A2D7B7 /* WinnerScene.swift in Sources */,
 				EB2262A51A0835F1001CE4BA /* CJCrashDelegate.swift in Sources */,
 				EB1193D91942727200A85A3F /* RandomNumberGenerator.swift in Sources */,
+				EB804F3D1A23DE1200F3504B /* Keyboard.swift in Sources */,
 				EBB9FAF01A07636A0057BB83 /* Asteroid.swift in Sources */,
 				EB9CB6DD1A0D584B0077DC27 /* DeathScene.swift in Sources */,
 				EB2262A71A083797001CE4BA /* CJHitDelegate.swift in Sources */,

@@ -9,8 +9,15 @@
 import SpriteKit
 
 class StartScene: SKScene {
+    
+    
     override func didMoveToView(view: SKView) {
         paused=true
+        let keyboard = Keyboard(selectedKeys: GameData.sharedInstance.getLetters())
+        let keyboardWidth = keyboard.calculateAccumulatedFrame().width
+
+        keyboard.position = CGPoint(x:(self.frame.width/2)-(keyboardWidth/2),y:300)
+        addChild(keyboard)
     }
     
     override func mouseDown(theEvent: NSEvent) {
