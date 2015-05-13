@@ -32,10 +32,15 @@ class WinnerScene:SKScene
     func changeView()
     {
         let reveal = SKTransition.fadeWithDuration(3)
-        let spaceScene = SpaceScene(size: self.frame.size)
-        spaceScene.scaleMode = SKSceneScaleMode.AspectFill;
-        GameData.sharedInstance.increaseLevel()
-        self.view!.presentScene(spaceScene, transition: reveal)
+        var nextScene:SKScene;
+        if GameData.sharedInstance.isBossLevel() {
+            nextScene = MonsterScene(size:self.frame.size)
+        }else{
+            nextScene = SpaceScene(size: self.frame.size)
+        }
+        nextScene.scaleMode = SKSceneScaleMode.AspectFill;
+
+        self.view!.presentScene(nextScene, transition: reveal)
     }
     
     override func willMoveFromView(view: SKView) {

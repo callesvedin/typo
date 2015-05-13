@@ -3,11 +3,47 @@
 <plist version="1.0">
 <array>
 	<dict>
-		<key>asteroidspeed_1</key>
+		<key>levelType</key>
+		<string>ORDINARY</string>
+		<key>asteroidSpeed_1</key>
 		<integer>10</integer>
-		<key>asteroidspeed_2</key>
+		<key>asteroidSpeed_2</key>
 		<integer>50</integer>
-		<key>asteroidspeed_3</key>
+		<key>asteroidSpeed_3</key>
+		<integer>100</integer>
+		<key>asteroidDropRate</key>
+		<real>1</real>
+		<key>NumberOfCharacters</key>
+		<integer>50</integer>
+		<key>Characters</key>
+		<string>asdfjklö</string>
+	</dict>
+	<dict>
+		<key>levelType</key>
+		<string>ORDINARY</string>
+		<key>asteroidSpeed_1</key>
+		<integer>20</integer>
+		<key>asteroidSpeed_2</key>
+		<integer>100</integer>
+		<key>asteroidSpeed_3</key>
+		<integer>200</integer>
+		<key>asteroidDropRate</key>
+		<real>0.75</real>
+		<key>NumberOfCharacters</key>
+		<integer>50</integer>
+		<key>Characters</key>
+		<string>asdfjklö</string>
+	</dict>
+	<dict>
+		<key>levelType</key>
+		<string>ORDINARY</string>
+		<key>asteroidDropRate</key>
+		<real>0.5</real>
+		<key>asteroidSpeed_1</key>
+		<integer>10</integer>
+		<key>asteroidSpeed_2</key>
+		<integer>50</integer>
+		<key>asteroidSpeed_3</key>
 		<integer>100</integer>
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
@@ -15,40 +51,20 @@
 		<string>asdfjklö</string>
 	</dict>
 	<dict>
-        <key>asteroidspeed_1</key>
-        <integer>10</integer>
-        <key>asteroidspeed_2</key>
-        <integer>50</integer>
-        <key>asteroidspeed_3</key>
-        <integer>100</integer>
-		<key>NumberOfCharacters</key>
+		<key>levelType</key>
+		<string>BOSS</string>
+		<key>asteroidDropRate</key>
+		<integer>1</integer>
+		<key>asteroidSpeed_1</key>
+		<integer>10</integer>
+		<key>asteroidSpeed_2</key>
 		<integer>50</integer>
-		<key>Characters</key>
-		<string>asdfjklöqweruiop</string>
-	</dict>
-	<dict>
-        <key>asteroidspeed_1</key>
-        <integer>10</integer>
-        <key>asteroidspeed_2</key>
-        <integer>50</integer>
-        <key>asteroidspeed_3</key>
-        <integer>100</integer>
+		<key>asteroidSpeed_3</key>
+		<integer>100</integer>
 		<key>NumberOfCharacters</key>
 		<integer>50</integer>
 		<key>Characters</key>
 		<string>asdfjklöqweruiopzxcvm</string>
-	</dict>
-	<dict>
-        <key>asteroidspeed_1</key>
-        <integer>10</integer>
-        <key>asteroidspeed_2</key>
-        <integer>50</integer>
-        <key>asteroidspeed_3</key>
-        <integer>100</integer>        
-		<key>NumberOfCharacters</key>
-		<integer>50</integer>
-		<key>Characters</key>
-		<string>asdfjklö</string>
 	</dict>
 </array>
 </plist>

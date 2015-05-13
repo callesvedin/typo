@@ -25,13 +25,17 @@ class GroundNode:GameObject{
         self.position=CGPoint(x:0,y:10)
         setUpNode()
     }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 
     
     func setUpNode(){
         var nextXPosition:CGFloat=0
         while(nextXPosition-w<self.frameSize.width){
-            let sprite = groundImage.copy() as SKSpriteNode
+            let sprite = groundImage.copy() as! SKSpriteNode
             sprite.blendMode = SKBlendMode.Replace
             sprite.position = CGPoint(x:nextXPosition,y:h)
             addChild(sprite)

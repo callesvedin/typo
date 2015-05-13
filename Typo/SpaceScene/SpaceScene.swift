@@ -13,7 +13,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     var _previousTime = 0.0
     var _deltaTime = 0.0
 
-    let _dropRate = 1
+    var _dropRate:Double = 1
     var _lastDrop = 0.0
 
     let randomGenerator = RandomNumberGenerator()
@@ -34,6 +34,8 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
         GameData.sharedInstance.progressChangeListener = hud
         GameData.sharedInstance.gameOverDelegate = self
         GameData.sharedInstance.userWonDelegate = self
+        GameData.sharedInstance.progress = 0.2
+        _dropRate = GameData.sharedInstance.getDropRate()
         hud.zPosition = 3
         self.addChild(hud)
     }
@@ -47,7 +49,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
             _deltaTime = currentTime - _previousTime
             _previousTime = currentTime
             
-            if currentTime - _lastDrop > 1 {
+            if (currentTime - _lastDrop) > _dropRate {
                 self.addChild(createAsteroidNode())
                 _lastDrop = currentTime
             }
@@ -88,15 +90,27 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
             }
         }
         
-        minAsteroid?.hit()
-        if minAsteroid != nil {
-            hitDelegate.didHit(minAsteroid!.letter)
+        if let hitAsteroid = minAsteroid {
+            shotLaser(hitAsteroid)
+            hitDelegate.didHit(hitAsteroid.letter)
         }
     }
-    
+
+    func shotLaser(astroid:Asteroid){
+        var startPos:CGPoint
+        var laser:Laser = Laser()
+        if astroid.position.x > frame.width/2 {
+            laser.position = CGPoint(x:frame.width,y:0);
+        }else{
+            laser.position = CGPoint(x:0,y:0);
+        }
+        self.addChild(laser)
+        laser.fireAt(astroid);
+//        let remove = SKAction.runBlock({self.removeAllChildren();self.removeFromParent()})
+    }
     
     func createAsteroidNode() ->SKNode {
-        var characterIndex = randomGenerator.randomInt(0, to: countElements(levelLetters)-1)
+        var characterIndex = randomGenerator.randomInt(0, to: count(levelLetters)-1)
         let letter = Array(levelLetters)[characterIndex]
         let asteroid = Asteroid(letter: letter)
         asteroid.position = CGPoint(x:randomGenerator.randomInt(Int(asteroid.frame.size.width), to: Int(frame.width-100)),y:Int(frame.height))
@@ -106,7 +120,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     
     func createBackground()
     {
-        let background = SKSpriteNode(imageNamed: "stars")
+        let background = SKSpriteNode(imageNamed: "stars2")
         background.position = CGPoint(x:self.frame.size.width/2,y:self.frame.size.height/2)
         addChild(background)
 

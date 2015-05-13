@@ -20,11 +20,15 @@ class Asteroid:GameObject {
         setupNode()
     }
 
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
    
     func setupNode()
     {
         let burstPath = NSBundle.mainBundle().pathForResource("asteroid_fire", ofType: "sks")
-        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as SKEmitterNode
+        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as! SKEmitterNode
         burstNode.zPosition = 1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
@@ -65,14 +69,18 @@ class Asteroid:GameObject {
     }
     
     func collidedWith(other: SKPhysicsBody) {
+        println("Astroid Collided with \(other.node)")
         if let ground = other.node as? GroundNode {
             explode()
+        }else if let ground = other.node as? Laser {
+            hit()
         }
+
     }
     
     func hit(){
         let burstPath = NSBundle.mainBundle().pathForResource("explosion", ofType: "sks")
-        let explosionNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as SKEmitterNode
+        let explosionNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObjectWithFile(burstPath!) as! SKEmitterNode
         explosionNode.zPosition = 3
         self.addChild(explosionNode);
         

@@ -34,7 +34,7 @@ class StartScene: SKScene {
         let reveal = SKTransition.fadeWithDuration(3)
         let spaceScene = SpaceScene(size: self.frame.size)
         spaceScene.scaleMode = SKSceneScaleMode.AspectFill;
-        GameData.sharedInstance.increaseLevel()
+
         self.view!.presentScene(spaceScene, transition: reveal)
     }
 

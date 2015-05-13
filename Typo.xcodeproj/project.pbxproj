@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0B3EF81A3100C500E64EE1 /* Laser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0B3EF71A3100C500E64EE1 /* Laser.swift */; };
 		EB1193B71941AD0400A85A3F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B61941AD0400A85A3F /* main.swift */; };
 		EB1193B91941AD0400A85A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1193B81941AD0400A85A3F /* AppDelegate.swift */; };
 		EB1193BF1941AD0400A85A3F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1193BE1941AD0400A85A3F /* Images.xcassets */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0B3EF71A3100C500E64EE1 /* Laser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Laser.swift; path = SpaceScene/Laser.swift; sourceTree = "<group>"; };
 		EB1193B11941AD0400A85A3F /* Typo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Typo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1193B51941AD0400A85A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB1193B61941AD0400A85A3F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				EB2262A61A083797001CE4BA /* CJHitDelegate.swift */,
 				EB9CB6DE1A0D58C30077DC27 /* GameOverDelegate.swift */,
 				EB71B4E61A115CC000A2D7B7 /* UserWonDelegate.swift */,
+				EB0B3EF71A3100C500E64EE1 /* Laser.swift */,
 			);
 			name = SpaceScene;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				EB2262A11A0816B5001CE4BA /* StartScene.swift in Sources */,
 				EBB9FAF81A0764280057BB83 /* MonsterScene.swift in Sources */,
 				EB2262A91A083904001CE4BA /* CJProgressListenerProtocol.swift in Sources */,
+				EB0B3EF81A3100C500E64EE1 /* Laser.swift in Sources */,
 				EB1193B71941AD0400A85A3F /* main.swift in Sources */,
 				EB71B4EB1A115DE900A2D7B7 /* WinnerScene.swift in Sources */,
 				EB2262A51A0835F1001CE4BA /* CJCrashDelegate.swift in Sources */,

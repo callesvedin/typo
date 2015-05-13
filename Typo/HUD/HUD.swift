@@ -17,7 +17,6 @@ class HUD: SKNode, CJProgressListenerProtocol {
         /* Setup your scene here */
         
         progressBar.position = CGPoint(x:size.width-200,y:size.height-400)
-        progressBar.progress = 0.5
         self.addChild(progressBar)
     }
 
