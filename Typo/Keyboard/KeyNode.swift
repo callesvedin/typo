@@ -14,10 +14,10 @@ class KeyNode:SKNode{
     init(keySize:CGRect, letter:String,selected:Bool) {
         super.init()
         self.position=CGPoint(x:0,y:10)
-        let thePath : CGPath = CGPathCreateWithRoundedRect(keySize, 8, 8, nil)
+        let thePath : CGPath = CGPath(roundedRect: keySize, cornerWidth: 8, cornerHeight: 8, transform: nil)
         let shapeNode = SKShapeNode(path:thePath)
-        shapeNode.fillColor = NSColor.whiteColor()
-        shapeNode.strokeColor = NSColor.whiteColor()
+        shapeNode.fillColor = NSColor.white
+        shapeNode.strokeColor = NSColor.white
         if selected {
             shapeNode.alpha = 0.8
         }else{
@@ -26,7 +26,7 @@ class KeyNode:SKNode{
         addChild(shapeNode)
         let labelNode:SKLabelNode = SKLabelNode(text:letter)
         
-        labelNode.fontColor = NSColor.blackColor()
+        labelNode.fontColor = NSColor.black
         labelNode.fontSize = 38
         labelNode.position = CGPoint(x:keySize.width/2,y:(keySize.height/2)-labelNode.frame.height/2)
         addChild(labelNode)

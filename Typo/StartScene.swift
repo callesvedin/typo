@@ -11,8 +11,8 @@ import SpriteKit
 class StartScene: SKScene {
     
     
-    override func didMoveToView(view: SKView) {
-        paused=true
+    override func didMove(to view: SKView) {
+        isPaused=true
         let keyboard = Keyboard(selectedKeys: GameData.sharedInstance.getLetters())
         let keyboardWidth = keyboard.calculateAccumulatedFrame().width
 
@@ -20,27 +20,27 @@ class StartScene: SKScene {
         addChild(keyboard)
     }
     
-    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(with theEvent: NSEvent) {
         changeView()        
     }
 
-    override func keyDown(event: NSEvent)
+    override func keyDown(with event: NSEvent)
     {
         changeView()
     }
 
     func changeView()
     {
-        let reveal = SKTransition.fadeWithDuration(3)
+        let reveal = SKTransition.fade(withDuration: 3)
         let spaceScene = SpaceScene(size: self.frame.size)
-        spaceScene.scaleMode = SKSceneScaleMode.AspectFill;
+        spaceScene.scaleMode = SKSceneScaleMode.aspectFill;
 
         self.view!.presentScene(spaceScene, transition: reveal)
     }
 
     
-    override func willMoveFromView(view: SKView) {
-        view.paused=false
+    override func willMove(from view: SKView) {
+        view.isPaused=false
     }
 }
 

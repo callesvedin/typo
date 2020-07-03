@@ -36,18 +36,18 @@ class GroundNode:GameObject{
         var nextXPosition:CGFloat=0
         while(nextXPosition-w<self.frameSize.width){
             let sprite = groundImage.copy() as! SKSpriteNode
-            sprite.blendMode = SKBlendMode.Replace
+            sprite.blendMode = SKBlendMode.replace
             sprite.position = CGPoint(x:nextXPosition,y:h)
             addChild(sprite)
             nextXPosition+=w
         }
         
-        physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width:nextXPosition+w,height:h), center:CGPoint(x: (nextXPosition+w)/2, y: h/2))
+        physicsBody = SKPhysicsBody(rectangleOf: CGSize(width:nextXPosition+w,height:h), center:CGPoint(x: (nextXPosition+w)/2, y: h/2))
 //        physicsBody = SKPhysicsBody(rectangleOfSize: self.frame.size)
 
         if physicsBody != nil {
             physicsBody!.affectedByGravity = false
-            physicsBody!.dynamic = false
+            physicsBody!.isDynamic = false
             physicsBody!.allowsRotation = false
             physicsBody!.categoryBitMask = groundCategory;
             physicsBody!.collisionBitMask = asteroidCategory

@@ -9,11 +9,11 @@
 import Foundation
 class RandomNumberGenerator {
     
-    func randomInt(from:Int, to:Int) -> Int {
+    func randomInt(_ from:Int, to:Int) -> Int {
         return from+random(to-from+1)
     }
     
-    func random(count:Int) -> Int {
+    func random(_ count:Int) -> Int {
         return Int(arc4random_uniform(UInt32(count)))
     }
 }

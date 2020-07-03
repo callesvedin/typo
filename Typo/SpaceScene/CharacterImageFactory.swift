@@ -20,11 +20,11 @@ class CharacterImageFactory{
     var characterImageMapping:Dictionary<Character,SKTexture> = Dictionary<Character,SKTexture>()
     
     
-    func getImageForLetter(character:Character)-> SKTexture? {
-        if var image = characterImageMapping[character] {
+    func getImageForLetter(_ character:Character)-> SKTexture? {
+        if let image = characterImageMapping[character] {
             return image
         }else{
-            if var image = createImage(character) {
+            if let image = createImage(character) {
                 characterImageMapping[character] = image
                 return image
             }
@@ -32,16 +32,16 @@ class CharacterImageFactory{
         return nil;
     }
     
-    func createImage(character:Character)-> SKTexture? {
+    func createImage(_ character:Character)-> SKTexture? {
         
         if let f = NSFont(name: "Helvetica", size:36) {
-            let attributes = [NSFontAttributeName:f, NSForegroundColorAttributeName:NSColor.whiteColor()]
+            let attributes = [convertFromNSAttributedStringKey(NSAttributedString.Key.font):f, convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor):NSColor.white]
             let ST = String(character)
             let myString: NSString = ST as NSString
-            let size: CGSize = myString.sizeWithAttributes(attributes)
+            let size: CGSize = myString.size(withAttributes: convertToOptionalNSAttributedStringKeyDictionary(attributes))
             let image = NSImage(size: size)
             image.lockFocus()
-            myString.drawAtPoint(NSZeroPoint, withAttributes: attributes)
+            myString.draw(at: NSZeroPoint, withAttributes: convertToOptionalNSAttributedStringKeyDictionary(attributes))
             image.unlockFocus()
             let texture = SKTexture(image: image)
             return texture;
@@ -50,3 +50,14 @@ class CharacterImageFactory{
     }
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}

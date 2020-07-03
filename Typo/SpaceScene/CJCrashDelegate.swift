@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CJCrashDelegate {
-    func didCrash(letter: Character)
+    func didCrash(_ letter: Character)
 }

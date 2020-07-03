@@ -11,7 +11,7 @@ class Laser:GameObject {
         addChild(sprite)
         name="laser"
         zPosition = 3;
-        hidden = true
+        isHidden = true
         setUpPhysics()
     }
 
@@ -36,7 +36,7 @@ class Laser:GameObject {
     }
 
     
-    func fireAt(target:Asteroid)
+    func fireAt(_ target:Asteroid)
     {
         
         var rotation:Float
@@ -53,14 +53,14 @@ class Laser:GameObject {
         
         //calculate your new duration based on the distance
         let moveDuration = 0.0001*distance;
-        let moveAction = SKAction.moveTo(target.position, duration: NSTimeInterval(moveDuration))
+        let moveAction = SKAction.move(to: target.position, duration: TimeInterval(moveDuration))
         
         let removeSelfAction  = SKAction.removeFromParent()
-        let hitAction = SKAction.runBlock({target.hit()})
+        let hitAction = SKAction.run({target.hit()})
 //        let hitAction = SKAction.runBlock({astroid.hit()})
         let shootAction = SKAction.sequence([moveAction,hitAction,removeSelfAction])
-        hidden = false
-        runAction(shootAction)
+        isHidden = false
+        run(shootAction)
     }
 }
 

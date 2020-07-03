@@ -10,32 +10,36 @@
 import Cocoa
 import SpriteKit
 
-extension SKNode {
-    class func unarchiveFromFile(file : NSString) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
-            var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! SKScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
-    }
-}
+//extension SKNode {
+//    class func unarchiveFromFile(_ file : NSString) -> SKNode? {
+//        if let path = Bundle.main.path(forResource: file as String, ofType: "sks") {
+//            
+////            var sceneData = Data(bytesNoCopy: path, count: .DataReadingMappedIfSafe, deallocator: nil)!
+//            var sceneData = Data(contentsOf: URL(path))!
+////            var sceneData = Data(bytesNoCopy: path, count: Int, deallocator: Data.Deallocator)
+//            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+//            
+//            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+//            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! SKScene
+//            archiver.finishDecoding()
+//            return scene
+//        } else {
+//            return nil
+//        }
+//    }
+//}
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var skView: SKView!
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         /* Pick a size for the scene */
-        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
+        if let scene = SKScene(fileNamed: "StartScene") {
+//        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .aspectFill
            // self.skView!.frameInterval = 2
             self.skView!.presentScene(scene)
             
@@ -50,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
     }
 }

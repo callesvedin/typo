@@ -24,10 +24,10 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     
     var pressedKeys : [Character] = [Character]()
     
-    override func didMoveToView(view: SKView) {
-        super.didMoveToView(view);
+    override func didMove(to view: SKView) {
+        super.didMove(to: view);
         backgroundColor = NSColor(red: 0, green: 0, blue: 0, alpha: 1)
-        self.physicsWorld.gravity = CGVectorMake(0.0, -1.0);
+        self.physicsWorld.gravity = CGVector(dx: 0.0, dy: -1.0);
         self.physicsWorld.contactDelegate = self;
         createBackground()
         let hud = HUD(size: view.frame.size)
@@ -40,8 +40,8 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
         self.addChild(hud)
     }
     
-    override func update(currentTime: CFTimeInterval) {
-        if (!self.paused){
+    override func update(_ currentTime: TimeInterval) {
+        if (!self.isPaused){
             if _previousTime == 0.0 {
                 _previousTime = currentTime
                 return
@@ -57,21 +57,21 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
     
     
-    override func keyDown(event: NSEvent) {
-        println("Key code:\(event.keyCode)")
-        println("Key characters:\(event.characters)")
+    override func keyDown(with event: NSEvent) {
+        print("Key code:\(event.keyCode)")
+        print("Key characters:\(String(describing: event.characters))")
         let c = Array(event.characters!)[0]
-        println("First character:\(c)")
+        print("First character:\(c)")
         if let pressedKeys = event.characters {
-            var backgroundQueue = NSOperationQueue()
-            backgroundQueue.addOperationWithBlock(){
+            let backgroundQueue = OperationQueue()
+            backgroundQueue.addOperation(){
                 self.handleKeyPresses(pressedKeys)
             }
         }
     }
     
     
-    func handleKeyPresses(characters:String)
+    func handleKeyPresses(_ characters:String)
     {
         //self.childNodeWithName("asteroid")
         var minAsteroid:Asteroid?
@@ -80,7 +80,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
             for child in self.children {
                 if let asteroid = child as? Asteroid {
                     if key == asteroid.letter {
-                        if minAsteroid?.position.y > asteroid.position.y {
+                        if minAsteroid != nil && minAsteroid!.position.y > asteroid.position.y {
                             minAsteroid=asteroid
                         }else if (minAsteroid == nil) {
                             minAsteroid=asteroid
@@ -96,7 +96,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
         }
     }
 
-    func shotLaser(astroid:Asteroid){
+    func shotLaser(_ astroid:Asteroid){
         var startPos:CGPoint
         var laser:Laser = Laser()
         if astroid.position.x > frame.width/2 {
@@ -110,7 +110,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
     
     func createAsteroidNode() ->SKNode {
-        var characterIndex = randomGenerator.randomInt(0, to: count(levelLetters)-1)
+        var characterIndex = randomGenerator.randomInt(0, to: levelLetters.characters.count-1)
         let letter = Array(levelLetters)[characterIndex]
         let asteroid = Asteroid(letter: letter)
         asteroid.position = CGPoint(x:randomGenerator.randomInt(Int(asteroid.frame.size.width), to: Int(frame.width-100)),y:Int(frame.height))
@@ -128,7 +128,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
     
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         if let asteroid = contact.bodyA.node as? Asteroid {
             asteroid.collidedWith(contact.bodyB)
             crashDelegate.didCrash(asteroid.letter)
@@ -141,17 +141,19 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
     
     func userWon() {
-        if let scene = WinnerScene.unarchiveFromFile("WinnerScene") as? WinnerScene {
-            let reveal = SKTransition.fadeWithDuration(3)
-            scene.scaleMode = SKSceneScaleMode.AspectFill;
+        if let scene = SKScene(fileNamed: "WinnerScene") {
+//        if let scene = WinnerScene.unarchiveFromFile("WinnerScene") as? WinnerScene {
+            let reveal = SKTransition.fade(withDuration: 3)
+            scene.scaleMode = SKSceneScaleMode.aspectFill;
             self.view!.presentScene(scene, transition: reveal)
         }
     }
     
     func userDied(){
-        if let scene = DeathScene.unarchiveFromFile("DeathScene") as? DeathScene {
-            let reveal = SKTransition.fadeWithDuration(3)
-            scene.scaleMode = SKSceneScaleMode.AspectFill;
+        if let scene = SKScene(fileNamed: "DeathScene") {
+//        if let scene = DeathScene.unarchiveFromFile("DeathScene") as? DeathScene {
+            let reveal = SKTransition.fade(withDuration: 3)
+            scene.scaleMode = SKSceneScaleMode.aspectFill;
             self.view!.presentScene(scene, transition: reveal)
         }
     }

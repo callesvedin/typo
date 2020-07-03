@@ -10,8 +10,8 @@ import SpriteKit
 
 class WinnerScene:SKScene
 {
-    override func didMoveToView(view: SKView) {
-        paused=true
+    override func didMove(to view: SKView) {
+        isPaused=true
         let keyboard = Keyboard(selectedKeys: GameData.sharedInstance.getLetters())
         let keyboardWidth = keyboard.calculateAccumulatedFrame().width
         
@@ -20,31 +20,31 @@ class WinnerScene:SKScene
 
     }
     
-    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(with theEvent: NSEvent) {
         changeView()
     }
     
-    override func keyDown(event: NSEvent)
+    override func keyDown(with event: NSEvent)
     {
         changeView()
     }
 
     func changeView()
     {
-        let reveal = SKTransition.fadeWithDuration(3)
+        let reveal = SKTransition.fade(withDuration: 3)
         var nextScene:SKScene;
         if GameData.sharedInstance.isBossLevel() {
             nextScene = MonsterScene(size:self.frame.size)
         }else{
             nextScene = SpaceScene(size: self.frame.size)
         }
-        nextScene.scaleMode = SKSceneScaleMode.AspectFill;
+        nextScene.scaleMode = SKSceneScaleMode.aspectFill;
 
         self.view!.presentScene(nextScene, transition: reveal)
     }
     
-    override func willMoveFromView(view: SKView) {
-        view.paused=false
+    override func willMove(from view: SKView) {
+        view.isPaused=false
     }
 
 }

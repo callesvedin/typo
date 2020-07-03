@@ -21,14 +21,14 @@ class GameData: CJCrashDelegate, CJHitDelegate {
     var progress:CGFloat{
         didSet {
                 progressChangeListener?.progressChanged(newValue:progress)
-                println("Progress changed to:\(progress)")
+                print("Progress changed to:\(progress)")
         }
     }
     
     init(){
         level=0
         bossLevel=false
-        let path = NSBundle.mainBundle().pathForResource("Levels",ofType:"plist")
+        let path = Bundle.main.path(forResource: "Levels",ofType:"plist")
         levelArray = NSArray(contentsOfFile:path!)!
         progress=0.2
     }
@@ -43,13 +43,13 @@ class GameData: CJCrashDelegate, CJHitDelegate {
     
     func getDropRate() ->Double {
         let levelDictionary = getLevelDictionary()
-        return (levelDictionary.objectForKey("asteroidDropRate") as! Double)
+        return (levelDictionary.object(forKey: "asteroidDropRate") as! Double)
     }
     
     func getRandomSpeed() -> CGFloat {
         let randomSpeed = randomGenerator.randomInt(1, to: 3)
         let levelDictionary = getLevelDictionary()
-        return (levelDictionary.objectForKey("asteroidSpeed_\(randomSpeed)") as! CGFloat)
+        return (levelDictionary.object(forKey: "asteroidSpeed_\(randomSpeed)") as! CGFloat)
     }
     
     func getLevelDictionary() -> NSDictionary
@@ -60,7 +60,7 @@ class GameData: CJCrashDelegate, CJHitDelegate {
     func isBossLevel() -> Bool
     {
         let dict = getLevelDictionary()
-        let levelTypeString = dict.objectForKey("levelType") as! String
+        let levelTypeString = dict.object(forKey: "levelType") as! String
         if "BOSS" == levelTypeString{
             return true
         }
@@ -69,10 +69,10 @@ class GameData: CJCrashDelegate, CJHitDelegate {
     
     func getLetters() -> String {
         let dict = getLevelDictionary()
-        return dict.objectForKey("Characters") as! String
+        return dict.object(forKey: "Characters") as! String
     }
     
-    func didCrash(letter: Character){
+    func didCrash(_ letter: Character){
         progress-=0.1
         if progress<0 {
             progress=0;
@@ -80,10 +80,10 @@ class GameData: CJCrashDelegate, CJHitDelegate {
         }
     }
     
-    func didHit(letter: Character){
+    func didHit(_ letter: Character){
         progress+=0.05
         if progress>1 {
-            level++
+            level += 1
             userWonDelegate?.userWon()
         }
 

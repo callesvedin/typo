@@ -22,12 +22,11 @@ class Keyboard:SKNode{
         var xpos:Int = 0
         var ypos = 0
         
-        for index in 0...(count(keyboardCharacters)-1)
+        for index in 0...(keyboardCharacters.characters.count-1)
         {
-            let characterIndex = advance(keyboardCharacters.startIndex, index)
-            let character = String(keyboardCharacters[characterIndex])
-            
-            let aKey = KeyNode(keySize:keySize,letter:character,selected:selectedKeys.rangeOfString(character) != nil)
+
+            let character = String(keyboardCharacters[keyboardCharacters.index(keyboardCharacters.startIndex, offsetBy: index)])            
+            let aKey = KeyNode(keySize:keySize,letter:character,selected:selectedKeys.range(of:character) != nil)
             if index == 11 {
                 ypos-=yKeyOffset
                 xpos=45

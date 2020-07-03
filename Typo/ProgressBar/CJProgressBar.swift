@@ -26,7 +26,7 @@ class ProgressBar:SKCropNode
         super.init()        
         let child = SKSpriteNode(imageNamed:"Progress")
         child.anchorPoint = CGPoint(x:0.5,y:0)
-        let mask = SKSpriteNode(color:NSColor.whiteColor(),size:CGSize(width:child.size.width,height:child.size.height))
+        let mask = SKSpriteNode(color:NSColor.white,size:CGSize(width:child.size.width,height:child.size.height))
         mask.anchorPoint=CGPoint(x:0.5,y:0)
         self.maskNode = mask
         self.addChild(child);

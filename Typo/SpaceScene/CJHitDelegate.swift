@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol CJHitDelegate {
-    func didHit(letter: Character)
+    func didHit(_ letter: Character)
 }

@@ -10,24 +10,26 @@ import SpriteKit
 
 class DeathScene:SKScene
 {
-    override func didMoveToView(view: SKView) {
-        paused=true
+    override func didMove(to view: SKView) {
+        isPaused=true
     }
     
-    override func mouseDown(theEvent: NSEvent) {
+    override func mouseDown(with theEvent: NSEvent) {
         /* Called when a mouse click occurs */
         
-        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
-            let reveal = SKTransition.fadeWithDuration(3)
-            scene.scaleMode = SKSceneScaleMode.AspectFill;
+        if let scene = SKScene(fileNamed: "StartScene") {
+//        if let scene = StartScene.unarchiveFromFile("StartScene") as? StartScene {
+        
+            let reveal = SKTransition.fade(withDuration: 3)
+            scene.scaleMode = SKSceneScaleMode.aspectFill;
             self.view!.presentScene(scene, transition: reveal)
         }
             
-        println("Game started")
+        print("Game started")
     }
     
-    override func willMoveFromView(view: SKView) {
-        view.paused=false
+    override func willMove(from view: SKView) {
+        view.isPaused=false
     }
 
 }
