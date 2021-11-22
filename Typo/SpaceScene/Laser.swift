@@ -46,7 +46,7 @@ class Laser:GameObject {
         //let angle = arctan(deltaY / deltaX)
         rotation = angle
         
-        let degToRad = M_PI/180*90
+        let degToRad = Double.pi/180*90
         zRotation = CGFloat(rotation+CFloat(degToRad))
         
         let distance = sqrt(pow((target.position.x - position.x), 2.0) + pow((target.position.y - position.y), 2.0));

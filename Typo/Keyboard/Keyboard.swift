@@ -22,7 +22,7 @@ class Keyboard:SKNode{
         var xpos:Int = 0
         var ypos = 0
         
-        for index in 0...(keyboardCharacters.characters.count-1)
+        for index in 0...(keyboardCharacters.count-1)
         {
 
             let character = String(keyboardCharacters[keyboardCharacters.index(keyboardCharacters.startIndex, offsetBy: index)])            

@@ -97,8 +97,8 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
 
     func shotLaser(_ astroid:Asteroid){
-        var startPos:CGPoint
-        var laser:Laser = Laser()
+        let startPos:CGPoint
+        let laser:Laser = Laser()
         if astroid.position.x > frame.width/2 {
             laser.position = CGPoint(x:frame.width,y:0);
         }else{
@@ -110,7 +110,7 @@ class SpaceScene:SKScene,GameOverDelegate, UserWonDelegate, SKPhysicsContactDele
     }
     
     func createAsteroidNode() ->SKNode {
-        var characterIndex = randomGenerator.randomInt(0, to: levelLetters.characters.count-1)
+        let characterIndex = randomGenerator.randomInt(0, to: levelLetters.count-1)
         let letter = Array(levelLetters)[characterIndex]
         let asteroid = Asteroid(letter: letter)
         asteroid.position = CGPoint(x:randomGenerator.randomInt(Int(asteroid.frame.size.width), to: Int(frame.width-100)),y:Int(frame.height))

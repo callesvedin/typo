@@ -28,7 +28,7 @@ class Asteroid:GameObject {
     func setupNode()
     {
         let burstPath = Bundle.main.path(forResource: "asteroid_fire", ofType: "sks")
-        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObject(withFile: burstPath!) as! SKEmitterNode
+        let burstNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObject(withFile: burstPath!) as? SKEmitterNode
         burstNode.zPosition = 1
         
         let textureName = "asteroid_\(randomGenerator.randomInt(1, to: 4))"
@@ -69,10 +69,10 @@ class Asteroid:GameObject {
     }
     
     func collidedWith(_ other: SKPhysicsBody) {
-        print("Astroid Collided with \(other.node)")
-        if let ground = other.node as? GroundNode {
+        print("Astroid Collided with \(String(describing: other.node))")
+        if (other.node as? GroundNode) != nil {
             explode()
-        }else if let ground = other.node as? Laser {
+        }else if (other.node as? Laser) != nil {
             hit()
         }
 
@@ -80,7 +80,7 @@ class Asteroid:GameObject {
     
     func hit(){
         let burstPath = Bundle.main.path(forResource: "explosion", ofType: "sks")
-        let explosionNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObject(withFile: burstPath!) as! SKEmitterNode
+        let explosionNode : SKEmitterNode! =  NSKeyedUnarchiver.unarchiveObject(withFile: burstPath!) as? SKEmitterNode
         explosionNode.zPosition = 3
         self.addChild(explosionNode);
         
